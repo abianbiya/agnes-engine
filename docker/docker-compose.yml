@@ -21,7 +21,7 @@ services:
       dockerfile: docker/Dockerfile
     image: rag-chatbot-api:latest
     ports:
-      - "8080:8080"
+      - "${API_PORT:-8080}:8080"
     environment:
       # ChromaDB connection
       - CHROMA_HOST=chromadb
@@ -40,7 +40,7 @@ services:
       - LOG_FORMAT=json
       
       # Environment
-      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - ENVIRONMENT=${ENVIRONMENT:-production}
       # Redis (optional)
       - REDIS_HOST=redis
       - REDIS_PORT=6379
@@ -83,7 +83,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-    restart: unless-stopped
+    restart: ${RESTART_POLICY:-unless-stopped}
     networks:
       - rag-network
 
@@ -94,7 +94,7 @@ services:
     container_name: chromadb
     image: chromadb/chroma:latest
     ports:
-      - "8000:8000"
+      - "${CHROMA_PORT:-8000}:8000"
     environment:
       - IS_PERSISTENT=TRUE
       - ANONYMIZED_TELEMETRY=${CHROMA_ANONYMIZED_TELEMETRY:-TRUE}
@@ -106,7 +106,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-    restart: unless-stopped
+    restart: ${RESTART_POLICY:-unless-stopped}
     networks:
       - rag-network
 
@@ -120,7 +120,7 @@ services:
       dockerfile: docker/Dockerfile.mcp
     image: rag-chatbot-mcp:latest
     ports:
-      - "3000:3000"
+      - "${MCP_SERVER_PORT:-3000}:3000"
     environment:
       # MCP Configuration
       - MCP_TRANSPORT=${MCP_TRANSPORT:-sse}
@@ -149,8 +149,8 @@ services:
       - EMBEDDING_MODEL=${EMBEDDING_MODEL:-bge-m3}
       
       # Logging
-      - LOG_LEVEL=INFO
-      - LOG_FORMAT=json
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LOG_FORMAT=${LOG_FORMAT:-json}
     volumes:
       # Mount data directory
       - mcp-data:/app/data:rw
@@ -159,7 +159,7 @@ services:
     depends_on:
       - rag-api
       - chromadb
-    restart: unless-stopped
+    restart: ${RESTART_POLICY:-unless-stopped}
     networks:
       - rag-network
 
@@ -170,7 +170,7 @@ services:
     container_name: redis
     image: redis:7-alpine
     ports:
-      - "6379:6379"
+      - "${REDIS_PORT:-6379}:6379"
     volumes:
       - redis-data:/data:rw
     command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
@@ -179,7 +179,7 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
-    restart: unless-stopped
+    restart: ${RESTART_POLICY:-unless-stopped}
     networks:
       - rag-network
 
