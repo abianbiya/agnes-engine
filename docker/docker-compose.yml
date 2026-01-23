@@ -21,7 +21,7 @@ services:
       dockerfile: docker/Dockerfile
     image: rag-chatbot-api:latest
     ports:
-      - "${API_PORT:-8080}:8080"
+      - "${API_HOST_PORT:-8080}:8080"
     environment:
       # ChromaDB connection
       - CHROMA_HOST=chromadb
@@ -94,7 +94,7 @@ services:
     container_name: chromadb
     image: chromadb/chroma:latest
     ports:
-      - "${CHROMA_PORT:-8000}:8000"
+      - "${CHROMA_HOST_PORT:-8000}:8000"
     environment:
       - IS_PERSISTENT=TRUE
       - ANONYMIZED_TELEMETRY=${CHROMA_ANONYMIZED_TELEMETRY:-TRUE}
@@ -120,7 +120,7 @@ services:
       dockerfile: docker/Dockerfile.mcp
     image: rag-chatbot-mcp:latest
     ports:
-      - "${MCP_SERVER_PORT:-3000}:3000"
+      - "${MCP_HOST_PORT:-3000}:3000"
     environment:
       # MCP Configuration
       - MCP_TRANSPORT=${MCP_TRANSPORT:-sse}
@@ -170,7 +170,7 @@ services:
     container_name: redis
     image: redis:7-alpine
     ports:
-      - "${REDIS_PORT:-6379}:6379"
+      - "${REDIS_HOST_PORT:-6379}:6379"
     volumes:
       - redis-data:/data:rw
     command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
