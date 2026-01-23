@@ -1,0 +1,222 @@
+# =============================================================================
+# Docker Compose Configuration for RAG Chatbot System
+# =============================================================================
+# Services:
+#   - rag-api: FastAPI REST API for RAG chatbot
+#   - chromadb: Vector database for document embeddings
+#   - mcp-server: Model Context Protocol server for AI assistants
+#   - redis: Optional caching layer for sessions
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # RAG API Service
+  # ---------------------------------------------------------------------------
+  rag-api:
+    container_name: rag-api
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: rag-chatbot-api:latest
+    ports:
+      - "8080:8080"
+    environment:
+      # ChromaDB connection
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+      - CHROMA_IN_MEMORY=false
+      
+      # API configuration
+      - API_HOST=0.0.0.0
+      - API_PORT=8080
+      - CORS_ENABLED=true
+      - CORS_ORIGINS=http://localhost:3000,http://localhost:8080
+      
+      
+      # Logging
+      - LOG_LEVEL=INFO
+      - LOG_FORMAT=json
+      
+      # Environment
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      # Redis (optional)
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_ENABLED=false
+      
+      # OpenAI API Key (only needed if using OpenAI provider)
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      
+      # LLM Configuration
+      - LLM_PROVIDER=${LLM_PROVIDER:-ollama}
+      - LLM_MODEL=${LLM_MODEL:-llama3.2}
+      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0.7}
+      
+      # Ollama Configuration
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2}
+      
+      # Embedding Configuration
+      # Using bge-m3 for better multilingual (Indonesian) support
+      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-ollama}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-bge-m3}
+      
+      # Retrieval Configuration
+      - RETRIEVAL_K=${RETRIEVAL_K:-4}
+      - USE_MMR=${USE_MMR:-true}
+      - MMR_DIVERSITY=${MMR_DIVERSITY:-0.5}
+    volumes:
+      # Mount documents directory for ingestion
+      - ../documents:/app/documents:rw
+      # Mount data directory for persistence
+      - rag-data:/app/data:rw
+      # Mount logs directory
+      - rag-logs:/app/logs:rw
+    depends_on:
+      chromadb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "scripts/healthcheck.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+  # ---------------------------------------------------------------------------
+  # ChromaDB Vector Database
+  # ---------------------------------------------------------------------------
+  chromadb:
+    container_name: chromadb
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=${CHROMA_ANONYMIZED_TELEMETRY:-TRUE}
+    volumes:
+      - chroma-data:/chroma/chroma:rw
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 5 bash -c '</dev/tcp/localhost/8000' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+  # ---------------------------------------------------------------------------
+  # MCP Server for AI Assistant Integration
+  # ---------------------------------------------------------------------------
+  mcp-server:
+    container_name: mcp-server
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.mcp
+    image: rag-chatbot-mcp:latest
+    ports:
+      - "3000:3000"
+    environment:
+      # MCP Configuration
+      - MCP_TRANSPORT=${MCP_TRANSPORT:-sse}
+      - MCP_SERVER_PORT=3000
+      - MCP_SERVER_NAME=rag-chatbot
+      
+      # ChromaDB connection
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8000
+      - CHROMA_IN_MEMORY=false
+      
+      # OpenAI API Key (only needed if using OpenAI provider)
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      
+      # LLM Configuration
+      - LLM_PROVIDER=${LLM_PROVIDER:-ollama}
+      - LLM_MODEL=${LLM_MODEL:-llama3.2}
+      
+      # Ollama Configuration
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2}
+      
+      # Embedding Configuration
+      # Using bge-m3 for better multilingual (Indonesian) support
+      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-ollama}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-bge-m3}
+      
+      # Logging
+      - LOG_LEVEL=INFO
+      - LOG_FORMAT=json
+    volumes:
+      # Mount data directory
+      - mcp-data:/app/data:rw
+      # Mount logs directory
+      - mcp-logs:/app/logs:rw
+    depends_on:
+      - rag-api
+      - chromadb
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+  # ---------------------------------------------------------------------------
+  # Redis Cache (Optional)
+  # ---------------------------------------------------------------------------
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data:rw
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+# =============================================================================
+# Named Volumes for Data Persistence
+# =============================================================================
+volumes:
+  # ChromaDB vector store data
+  chroma-data:
+    driver: local
+  
+  # RAG API data and uploaded documents
+  rag-data:
+    driver: local
+  
+  # RAG API logs
+  rag-logs:
+    driver: local
+  
+  # MCP server data
+  mcp-data:
+    driver: local
+  
+  # MCP server logs
+  mcp-logs:
+    driver: local
+  
+  # Redis persistence
+  redis-data:
+    driver: local
+
+# =============================================================================
+# Docker Network
+# =============================================================================
+networks:
+  rag-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

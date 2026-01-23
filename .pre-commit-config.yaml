@@ -1,0 +1,72 @@
+# Pre-commit hooks configuration
+# See https://pre-commit.com for more information
+# Install: pip install pre-commit && pre-commit install
+
+repos:
+  # General hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: debug-statements
+
+  # Black - Python code formatter
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3.11
+        args: ['--config', 'pyproject.toml']
+
+  # Ruff - Fast Python linter
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.7.0
+    hooks:
+      - id: ruff
+        args: ['--fix', '--config', 'pyproject.toml']
+      - id: ruff-format
+
+  # MyPy - Static type checker
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.12.0
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - pydantic>=2.9.0
+          - types-redis>=4.6.0
+          - types-aiofiles>=24.1.0
+        args: ['--config-file', 'pyproject.toml']
+        pass_filenames: false
+        entry: mypy src/
+
+  # Pytest - Run tests before commit (optional, can be slow)
+  # Uncomment to enable
+  # - repo: local
+  #   hooks:
+  #     - id: pytest
+  #       name: pytest
+  #       entry: pytest tests/unit -v --tb=short
+  #       language: system
+  #       pass_filenames: false
+  #       always_run: true
+
+# Configuration
+default_language_version:
+  python: python3.11
+
+# Skip hooks on specific files
+exclude: |
+  (?x)^(
+    .*\.min\.js|
+    .*\.min\.css|
+    data/.*|
+    documents/.*
+  )$

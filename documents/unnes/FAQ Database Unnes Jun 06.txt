@@ -1,0 +1,102 @@
+This document contains a collection of Frequently Asked Questions (FAQs) and their corresponding answers used for a Retrieval-Augmented Generation (RAG) chatbot. The chatbot is designed to accurately answer user queries using only the information provided in this document. Each entry consists of a clearly stated question and a concise, factually correct answer. All content is focused on academic services at UNNES.
+
+### Question:
+Tidak ada/tidak punya tagihan pada pengisian datapokok
+Answer:
+Misal tidak memiliki tagihan air karena menggunakan sumur maka bisa diisikan 0 dan diberi keterangan misal ""menggunakan air sumur""
+
+
+### Question:
+Tidak ada biaya pendidikan SMA pada pengisian datapokok
+Answer:
+Jika saat SMA tidak ada biaya pendidikan bisa dibuatkan surat keterangan dari sekolah yang menjelaskan kalau tidak ada biaya pendidikan selama SMA.
+
+
+### Question:
+Gagal upload dokumen pada pengisian datapokok
+Answer:
+Upload dokumen yang gagal dimana sudah upload tapi dibuka hilang lagi, bisa dicoba upload dokumen tersebut satu persatu, misal foto rumah tampak depan upload simpan, foto ruang tamu upload simpan, dst. Demikian juga saat pengisian registrasi online, upload dokumen satu persatu.
+
+
+### Question:
+Isian Nominal pada pengisian datapokok
+Answer:
+Isian yang berupa nominal terutama yang berkaitan dengan kemampuan ekonomi misal pendapatan orang tua, wajib diisikan dengan bilangan bulat dan satuannya per bulan, contoh: penghasilan 2 juta per bulan diisi 2000000, penghasilan 48 juta pertahun diisikan 4000000, penghasilan 100rb per hari dibuat rerata perbulan, misal asumsi 20 hari kerja bisa diisi 2000000.
+
+
+### Question:
+Foto di datapokok Kurang dari 80%
+Answer:
+Pastikan background merah, crop rasio 3:4 dan lebih fokus ke wajah (zoom-in).
+
+
+### Question:
+Pengisian profil di datapokok
+Answer:
+Profil di aplikasi datapokok bisa diabaikan dan langsung ke pengisian datapokok saja, pas foto nanti akan diminta saat tahapan registrasi online.
+
+
+### Question:
+Bagaimana cara Pengunduran Diri dari Calon mahasiswa baru UNNES
+Answer:
+Calon mahasiswa di semua jalur jika ingin melakukan pengunduran diri dapat dilakukan melalui datapokok.unnes.ac.id.
+
+
+### Question:
+Bagaimana jika Diterima 2 jalur SNBT dan SM 2025
+Answer:
+Beberapa peserta seleksi diterima dobel di jalur SNBT dan Seleksi Mandiri, selama tidak melakukan registrasi SNBT masih bisa diterima di jalur Seleksi Mandiri, jika sudah registrasi SNBT namun ingin memilih jalur Seleksi Mandiri, maka bisa segera menghubungi perguruan tinggi penerima SNBT untuk pengunduran diri. Demikian juga jika diterima di 2 jalur Seleksi Mandiri.&nbsp;
+
+
+### Question:
+Pengiriman dokumen SNBT
+Answer:
+Dokumen yang dikirim adalah dokumen A1 yang diperoleh setelah melakukan finalisasi dan dokumen rapor. Pengiriman ke 2 alamat yang berbeda, untuk A1 dikirim ke masing-masing fakultas sedangkan rapor dikirim ke ALT UNNES. Pengiriman paling lambat tgl 8 April dari domisili masing-masing(bukan 8 April sampai di UNNES), bisa menggunakan pos atau jasa ekspedisi lain.
+
+
+### Question:
+Pengisian profil di datapokok
+Answer:
+Profil di aplikasi datapokok bisa diabaikan dan langsung ke pengisian datapokok saja, pas foto nanti akan diminta saat tahapan registrasi online.
+
+
+### Question:
+Foto di datapokok Kurang dari 80%
+Answer:
+Pastikan background merah, crop rasio 3:4 dan lebih fokus ke wajah (zoom-in).
+
+
+### Question:
+Bagaimana cara Pengunduran Diri dari Calon mahasiswa baru UNNES
+Answer:
+Calon mahasiswa di semua jalur jika ingin melakukan pengunduran diri dapat dilakukan melalui datapokok.unnes.ac.id.
+
+
+### Question:
+Bagaimana jika Diterima 2 jalur SNBT dan SM 2025
+Answer:
+Beberapa peserta seleksi diterima dobel di jalur SNBT dan Seleksi Mandiri, selama tidak melakukan registrasi SNBT masih bisa diterima di jalur Seleksi Mandiri, jika sudah registrasi SNBT namun ingin memilih jalur Seleksi Mandiri, maka bisa segera menghubungi perguruan tinggi penerima SNBT untuk pengunduran diri. Demikian juga jika diterima di 2 jalur Seleksi Mandiri.
+
+
+### Question:
+Isian Nominal pada pengisian datapokok
+Answer:
+Isian yang berupa nominal terutama yang berkaitan dengan kemampuan ekonomi misal pendapatan orang tua, wajib diisikan dengan bilangan bulat dan satuannya per bulan, contoh: penghasilan 2 juta per bulan diisi 2000000, penghasilan 48 juta pertahun diisikan 4000000, penghasilan 100rb per hari dibuat rerata perbulan, misal asumsi 20 hari kerja bisa diisi 2000000.
+
+
+### Question:
+Gagal upload dokumen pada pengisian datapokok
+Answer:
+Upload dokumen yang gagal dimana sudah upload tapi dibuka hilang lagi, bisa dicoba upload dokumen tersebut satu persatu, misal foto rumah tampak depan upload simpan, foto ruang tamu upload simpan, dst. Demikian juga saat pengisian registrasi online, upload dokumen satu persatu.
+
+
+### Question:
+Tidak ada biaya pendidikan SMA pada pengisian datapokok
+Answer:
+Jika saat SMA tidak ada biaya pendidikan bisa dibuatkan surat keterangan dari sekolah yang menjelaskan kalau tidak ada biaya pendidikan selama SMA.
+
+
+### Question:
+Tidak ada/tidak punya tagihan pada pengisian datapokok
+Answer:
+Misal tidak memiliki tagihan air karena menggunakan sumur maka bisa diisikan 0 dan diberi keterangan misal ""menggunakan air sumur""

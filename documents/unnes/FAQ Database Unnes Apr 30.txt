@@ -1,0 +1,1201 @@
+This document contains a collection of Frequently Asked Questions (FAQs) and their corresponding answers used for a Retrieval-Augmented Generation (RAG) chatbot. The chatbot is designed to accurately answer user queries using only the information provided in this document. Each entry consists of a clearly stated question and a concise, factually correct answer. All content is focused on academic services at UNNES.
+
+
+### Question:
+Apa Admisi dan Layanan Terpadu (ALT)?
+Answer:
+Sesuai Peraturan Rektor Nomor 11 Tahun 2023 tentang Struktur dan Tata Kerja Organisasi di Bawah Rektor Universitas Negeri Semarang (UNNES) yang disahkan tanggal 6 April 2023, Unit Layanan Terpadu (ULT) dikembangkan menjadi Admisi dan Layanan Terpadu (ALT) dengan mengemban tugas sebagai berikut.
+        1        Melakukan layanan penerimaan mahasiswa baru.
+        2        Melakukan analisis dan evaluasi pelaksanaan penerimaan mahasiswa baru.
+        3        Mengelola layanan pengaduan dari stakeholders.
+        4        Pemberian layanan penyelesaian permasalahan akademik.
+        5        Pemberian layanan penyelesaian permasalahan kemahasiswaan.
+        6        Pemberian layanan penyelesaian permasalahan IT.
+        7        Pemberian layanan penyelesaian permasalahan keuangan.
+        8        Pemberian layanan penyelesaian permasalahan lain yang ada di UNNES.
+Jadi, ALT merupakan tempat pengaduan pertama bagi mahasiswa/ pegawai/ masyarakat umum/ calon mahasiswa baru yang memiliki kendala.
+Kanal Layanan:
+        •        Laman unnes.ac.id/helpdesk pilih buat tiket baru, kemudian kakak bisa ngobrol dulu tentang aduan sama Agnes (Artificial Guide On UNNES)
+        •        Telephone (024) 86008700 ext. 000.
+Jam Layanan:
+        •        Senin s.d. Kamis: pukul 08.00 s.d. 15.00 WIB, istirahat pukul 12.00 s.d. 13.00 WIB
+        •        Jumat: pukul 08.00 s.d. 14.00 WIB, istirahat pukul 11.30 s.d. 13.00 WIB
+
+### Question:
+bagaimana cara menyampaikan aduan/masalah/kendala?
+Answer:
+Sesuai Peraturan Rektor Nomor 11 Tahun 2023 tentang Struktur dan Tata Kerja Organisasi di Bawah Rektor Universitas Negeri Semarang (UNNES) yang disahkan tanggal 6 April 2023, Unit Layanan Terpadu (ULT) dikembangkan menjadi Admisi dan Layanan Terpadu (ALT) dengan mengemban tugas sebagai berikut.
+        1        Melakukan layanan penerimaan mahasiswa baru.
+        2        Melakukan analisis dan evaluasi pelaksanaan penerimaan mahasiswa baru.
+        3        Mengelola layanan pengaduan dari stakeholders.
+        4        Pemberian layanan penyelesaian permasalahan akademik.
+        5        Pemberian layanan penyelesaian permasalahan kemahasiswaan.
+        6        Pemberian layanan penyelesaian permasalahan IT.
+        7        Pemberian layanan penyelesaian permasalahan keuangan.
+        8        Pemberian layanan penyelesaian permasalahan lain yang ada di UNNES.
+Jadi, ALT merupakan tempat pengaduan pertama bagi mahasiswa/ pegawai/ masyarakat umum/ calon mahasiswa baru yang memiliki kendala.
+Kanal Layanan:
+        •        Laman unnes.ac.id/helpdesk pilih buat tiket baru, kemudian kakak bisa ngobrol dulu tentang aduan sama Agnes (Artificial Guide On UNNES)
+        •        Telephone (024) 86008700 ext. 000.
+Jam Layanan:
+        •        Senin s.d. Kamis: pukul 08.00 s.d. 15.00 WIB, istirahat pukul 12.00 s.d. 13.00 WIB
+        •        Jumat: pukul 08.00 s.d. 14.00 WIB, istirahat pukul 11.30 s.d. 13.00 WIB
+
+### Question:
+Verifikasi Berkas Kelulusan di sikadu belum diverifikasi
+Answer:
+Pastikan unggahan pas foto, ijazah, dan KTP kakak di aplikasi wisuda menu paskaperkuliahan sudah tampil semua fotonya. Jika salah satu ada yang belum tampil, silakan unggah kembali. Apabila sudah tampil semua, berkas kakak sudah masuk ke dalam daftar antrian petugas untuk segera dilakukan verifikasi. Pengecekan verifikasi berkas wisuda dapat dilihat di aplikasi sikadu menu SBVT pada bagian ""verifikasi berkas wisuda"" akan centang hijau. Selain itu, akan ada notifikasi melalui telegram UNNES STUDENT INFO dan di laman sikadu menu paskaperkuliahan
+
+### Question:
+verifikasi berkas kelulusan masih merah
+Answer:
+Pastikan unggahan pas foto, ijazah, dan KTP kakak di aplikasi wisuda menu paskaperkuliahan sudah tampil semua fotonya. Jika salah satu ada yang belum tampil, silakan unggah kembali. Apabila sudah tampil semua, berkas kakak sudah masuk ke dalam daftar antrian petugas untuk segera dilakukan verifikasi. Pengecekan verifikasi berkas wisuda dapat dilihat di aplikasi sikadu menu SBVT pada bagian ""verifikasi berkas wisuda"" akan centang hijau. Selain itu, akan ada notifikasi melalui telegram UNNES STUDENT INFO dan di laman sikadu menu paskaperkuliahan
+
+### Question:
+verifikasi berkas wisuda masih tanda silang
+Answer:
+Pastikan unggahan pas foto, ijazah, dan KTP kakak di aplikasi wisuda menu paskaperkuliahan sudah tampil semua fotonya. Jika salah satu ada yang belum tampil, silakan unggah kembali. Apabila sudah tampil semua, berkas kakak sudah masuk ke dalam daftar antrian petugas untuk segera dilakukan verifikasi. Pengecekan verifikasi berkas wisuda dapat dilihat di aplikasi sikadu menu SBVT pada bagian ""verifikasi berkas wisuda"" akan centang hijau. Selain itu, akan ada notifikasi melalui telegram UNNES STUDENT INFO dan di laman sikadu menu paskaperkuliahan
+
+### Question:
+Kode OTP salah
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"". Cara join kedua bot secara teknis adalah sama.
+Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+1. Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+2. Aktivasi telegram kakak dengan nomor yang aktif,
+3. Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+4. Klik tombol ""Start"" atau tulis /start,
+5. Ikuti petunjuk yang ada di layar smartphone,
+6. Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan  bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+7. Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+8. Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+9. Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"". Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Untuk akses wifi UNNES-ID, silakan tulis /internet
+
+
+### Question:
+Bagaimana jika belum melakukan finalisasi datapokok sampai batas waktu pengisian?
+Answer:
+Data terakhir yang diisikan akan difinalisasi otomatis oleh sistem. Ketidaklengkapan data akan berpengaruh pada penilaian kategori UKT.
+
+### Question:
+Bagaimana jika isian datapokok tidak lengkap/ tidak sesuai?
+Answer:
+Isian data pokok HARUS dilengkapi sesuai dengan keadaan sesungguhnya, karena penilaian UKT akan berdasarkan isian data pokok.Pengisian data yang tidak sesuai dengan keadaan yang sesungguhnya, maka akan menjadi tanggung jawab mahasiswa tersebut apabila suatu saat timbul permasalahan.
+
+### Question:
+Bagaimana jika bukti pembayaran air, telfon, listrik merupakan tagihan akumulatif?
+Answer:
+Sebaiknya membuat Surat Keterangan penggunaan per bulan diketahui RT setempat.
+
+### Question:
+Bagaimana jika sudah melakukan finalisasi tapi masih ada kesalahan data?
+Answer:
+Ajukan permohonan pembatalan finalisasi melalui tautan berikut selama masih dalam periode pengisian datapokok dengan melampirkan kartu peserta. Perbaikan data dilakukan secara mandiri setelah finalisasi dibatalkan.
+
+### Question:
+-Saya mau UKT Tertinggi agar tidak mengisi banyak isian datapokok
+Answer:
+Ajukan permohonan pembatalan finalisasi melalui tautan berikut selama masih dalam periode pengisian datapokok dengan melampirkan kartu peserta. Perbaikan data dilakukan secara mandiri setelah finalisasi dibatalkan.
+
+### Question:
+-Bagaimana mengubah isian datapokok sesuai keadaaan dengan bersedia dimasukkan ke kategori UKT tertinggi?
+Answer:
+Ajukan permohonan pembatalan finalisasi melalui tautan berikut selama masih dalam periode pengisian datapokok dengan melampirkan kartu peserta. Perbaikan data dilakukan secara mandiri setelah finalisasi dibatalkan.
+
+### Question:
+Apa perbedaan isian formulir konfirmasi UKT antara ya saya bersedia dimasukkan ke kategori tertinggi, saya ingin mengisi datapokok sesuai keadaan saya, dan saya pelamar KIP?
+Answer:
+Isian datapokok untuk camaba yang bersedia dimasukkan ke kategori tertinggi adalah isian biodata pribadi, riwayat pendidikan, dan informasi keluarga, sementara isian datapokok sesuai keadaan dan pelamar KIP adalah sama, meliputi biodata pribadi, riwayat pendidikan, informasi keluarga, informasi jumlah tanggungan keluarga,daftar biodata kakak kandung, informasi rumah, kondisi rumah, MCK/penerangan/telekomunikasi, lingkungan rumah, perabot rumah tanggan dan elektronik, informasi sosial ekonomi keluarga, kepemilikan aset/harta keluarga, sarana transportasi, laporan lain, dan unggahan dokumen
+
+### Question:
+-bagaimana cara merubah konfirmasi UKT, saya pelamar KIPK tetapi memilih mengisi datapokok sesuai dengan keadaan saya? 
+Answer:
+Pilihan konfirmasi UKT tidak perlu diubah, isian formulir pelamar UKT dengan mengisi sesuai keadaan adalah sama. Kami telah menandai calon mahasiswa baru UNNES pelamar KIPK. Silakan lanjutkan pengisian datapokok kakak
+
+### Question:
+Data no BPJS/JKN-KIS apakah harus dilaporkan saat pengisian datapokok?
+Answer:
+Tetap harus dilaporkan saat pengisian dokumen, jika belum memiliki nomor BPJS/JKN-KIS silakan isi dengan NIK
+
+### Question:
+ Bagaimana membedakan lokasi rumah sudah tersimpan atau belum?
+Answer:
+Data sudah tersimpan apabila waktu dibuka kembali lokasi sudah berada di titik yang tepat. Telah ditambahkan notifikasi “tersimpan”.
+
+### Question:
+Saya sudah memiliki akun KIP Kuliah tahun 2022 apakah bisaikut KIP Kuliah tahun 2023?
+Answer:
+Untuk peserta yang sudah memiliki KIP Kuliah tahun 2022 dan ingin mengikuti kembali KIP Kuliah tahun 2023, silakan login menggunakan akun yang sama (akun KIP Kuliah 2022). Setekah berhasil login, akan ditampilkan profil siswa bseserta alamat email. Silakan isi ""Konfirmasi Email) dan klik ""Perbarui Akun""
+
+### Question:
+Saya penerima KIP Kuliah, apakah bisa menikah?
+Answer:
+Pada prinsipnya perihal menikah tidak diatur, namun bagi penerima KIP Kuliah perempuan, jika menikah maka kewajiban pembiayaan beralih ke suami dan dapat diasumsikan status sudah tidak termasuk ""tidak mampu""karena ada dukungan dari suami. Pengentian bantuan dapat dimungkinkan terjadi kecuali memang ada kontrak belajar dengan Perguruan Tinggi.
+
+### Question:
+Bagaimana cara menelusuri aduan saya?
+Answer:
+Aduan kakak dapat ditelusuri progressnya melalui akun masing-masing saat login di laman unnes.ac.id/helpdesk
+
+### Question:
+Apa itu Unit Layanan Terpadu UNNES?
+Answer:
+Unit Layanan Terpadu yang selanjutnya disebut ULT adalah unit kerja di UNNES yang sebagian atau seluruh tugas dan fungsinya melaksanakan kegiatan pelayanan secara terpadu dengan sistem satu pintu di Universitas Negeri Semarang. Tujuan diselenggarakannya ULT adalah untuk memberikan kemudahan dan kepastian bagi masyarakat dan warga UNNES. Harapan adanya ULT dapat mewujudkan pelayanan publik yang cepat, murah, mudah, transparan, pasti, terjangkau, dan akuntabel. Selain itu diharapkan ULT dapat meningkatkan hak-hak masyarakat terhadap pelayanan publik dengan berlandaskan asas kepentingan umum, keprofesionalan, keseimbangan hak dan kewajiban, partisipatif, persamaan perlakuan, keterbukaan, akuntabilitas, fasilitas dan perlakukan khusus bagi disabilitas, ketepatan waktu, kecepatan, kemudahan, dan keterjangkauan. Prinsip yang terus dipegangoleh petugas ULT yaitu kemudahan akses, kepastian waktu, akurasi, sederhana, kejelasan, keamanan, proses, dan produk pelayanan terpadu, tanggung jawab, kelengkapan sarpras, kedisiplinan, kesopanan, keramahan, serta kenyamanan.
+
+### Question:
+Bagaimana sejarah UNNES?
+Answer:
+Sejarah UNNES, yang sebelumnya dikenal sebagai IKIP Semarang, dimulai dengan berdirinya berbagai institusi pendidikan guru di atas tingkat sekolah menengah. Institusi-institusi ini adalah Middelbaar Onderwijzer A Cursus (MO-A) dan Middelbaar Onderwijzer B Cursus (MO-B), yang keduanya disiapkan oleh pemerintah kolonial Belanda untuk melatih guru untuk sekolah menengah. Kursus MO-A dan MO-B diselenggarakan di Semarang hingga tahun 1950. Pada tahun 1950, MO-A diubah namanya menjadi kursus B-I dan MO-B diubah namanya menjadi kursus B-II, yang diselenggarakan hingga tahun 1960. Perkembangan selanjutnya dari UNNES dapat dilihat dalam tahapan-tahapan berikut.
+1960-1963: Fakultas Keguruan dan Ilmu Pendidikan (FKIP) dan Sekolah Tinggi Olahraga (STO). Pada tahun 1960, Kursus B-I dan Kursus B-II digabungkan ke Universitas Diponegoro untuk membentuk Fakultas Pendidikan. Pada tahun 1963, Departemen Pendidikan Jasmani, yang sebelumnya merupakan bagian dari Kursus B-II, dipisahkan dan menjadi Sekolah Ilmu Keolahragaan (STO) yang berdiri sendiri di bawah naungan Departemen Keolahragaan.
+1963-1965: Institut Keguruan dan Ilmu Pendidikan (IKIP) cabang Yogyakarta Semarang. Pada tahun 1963, diterbitkan sebuah Dekret Presiden untuk pendirian Institut Keguruan dan Ilmu Pendidikan (IKIP) sebagai lembaga pendidikan tenaga kependidikan. Saat itu, hanya ada empat IKIP di Jakarta, Bandung, Malang, dan Yogyakarta. FKIP Universitas Diponegoro, yang dianggap belum mampu berdiri sendiri, ditunjuk sebagai cabang Semarang dari IKIP Yogyakarta.
+1965-1999: IKIP Semarang. Cabang IKIP Yogyakarta di Semarang tumbuh pesat. Untuk mengarahkan perkembangannya dengan lebih efektif di masa depan, sambil menunggu Dekret Presiden, Menteri PTIP menerbitkan Surat Keputusan Menteri No. 40 tahun 1965 tanggal 8 Maret 1965, yang menetapkan cabang IKIP Yogyakarta di Semarang sebagai IKIP Semarang yang terdiri dari Fakultas Pendidikan, Fakultas Pendidikan Bahasa dan Seni, Fakultas Ilmu Sosial, Fakultas Ilmu Pasti dan Fakultas Pendidikan Teknik. Pada tahun 1977, program pendidikan guru di bidang olahraga kembali ke institusi induknya dalam entitas baru yang disebut Fakultas Pendidikan Ilmu Keolahragaan (FKIK).
+1999 to present: Universitas Negeri Semarang (UNNES). Dengan diterbitkannya Keputusan Presiden Nomor 124 tahun 1999 mengenai transformasi IKIP Semarang, Bandung, dan Medan menjadi universitas, IKIP Semarang kemudian berganti nama menjadi Universitas Negeri Semarang (UNNES). Pada tahun 2000, nama-nama fakultas di dalam UNNES diubah menjadi: Fakultas Ilmu Pendidikan, Fakultas Bahasa dan Seni, Fakultas Ilmu Sosial, Fakultas Matematika dan IPA, Fakultas Teknik, Fakultas Ilmu Keolahragaan, dan Program Pascasarjana. Pada tahun 2006, didirikan Fakultas Ekonomi, dan setahun setelahnya, terbentuklah Fakultas Hukum di UNNES. Pendirian kedua fakultas baru ini merupakan konsekuensi dari menjadi sebuah universitas.
+
+### Question:
+Apa Visi dan Misi UNNES?
+Answer:
+Berdasarkan ketentuan Pasal 4 Peraturan Pemerintah Nomor 36 Tahun 2022, UNNES memiliki visi menjadi universitas bereputasi dunia dan pelopor kecemerlangan pendidikan yang berwawasan konservasi. Misi UNNES adalah a. menyelenggarakan pendidikan yang cemerlang dan bereputasi dunia; b. melaksanakan penelitian dalam mengembangkan ilmu pengetahuan dan teknologi; c. melaksanakan pengabdian kepada masyarakat untuk memecahkan masalah, memberdayakan, dan menyejahterakan masyarakat; d. menerapkan tata kelola yang baik dan mampu beradaptasi dan bersinergi dengan lingkungan secara berkelanjutan; dan e. melaksanakan kerja sama dalam membangun reputasi
+
+### Question:
+Prosedur kelulusan untuk mahasiswa over studi atau yang mendapatkan perpanjangan masa studi
+Answer:
+khusus bagi mahasiswa yang mendapatkan perpanjangan masa studi, silakan mendaftar sidang tanpa melalui sitedi dan tidak perlu mengisi KRS skripsi di semester 15. langsung daftar secara manual. nilai dapat diunggah di sikadu saat SBVT oleh supervisor jurusan. Di sikadu login sebagai spv jurusan, kemudian di bagian sbvt sebelah bawah ada tombol ubah data, di situ langsung diisikan data skripsinya. terima kasih
+
+### Question:
+Bagaimana cara mengundurkan diri sebagai mahasiswa
+Answer:
+Jika ingin mengundurkan diri sebagai mahasiswa UNNES silahkan membuat surat pribadi kepada koordinator prodi, kemudian koordinator prodi membuat surat pengantar pengunduran diri kepada pimpinan fakultas, setelah itu pimpinan fakultas membuat surat pengantar pengunduran diri kepada rektor/ wakil rektor I untuk diproses lebih lanjut pelaporannya ke laman pddikti
+
+### Question:
+Mengubah biodata mahasiswa
+Answer:
+Disampaikan kepada seluruh mahasiswa baru untuk menghindari kesalahan identitas WAJIB melakukan pengecekan identitas data pribadi sebelum data kami laporkan ke PDDIKTI. Mohon untuk melakukan validasi identitas (nama, tempat tanggal lahir, nama gadis Ibu, NIK), di myunnes-students via apps.unnes.ac.id . Jika ada kesalahan mohon dapat melakukan perbaikan secara mandiri disertai dengan dokumen pendukung. 1. Jika yang akan diperbaiki adalah nama atau tempat dan tanggal lahir, mohon mengupload Ijazah terakhir 2. Jika NIK, mohon mengupload KTP/pasport 3. Jika nama gadis Ibu kandung sertakan Akta Kelahiran
+
+### Question:
+Bagaimana mengajukan defer atau penundaan studi
+Answer:
+silakan mengajukan surat permohonan defer kepada wakil rektor bidang akademik dan kemahasiswaan UNNES. Perlu kami sampaikan pula untuk camaba yang mengajukan defer, maka di periode perkuliahan semester berikutnya wajib melakukan pendaftaran sebagai mahasiswa baru kembali dan mengikuti seleksi sesuai prosedur dengan jaminan lulus seleksi.
+
+### Question:
+Bagaimana cara cetak ulang sertifikat pendidik karena hilang?
+Answer:
+Prosedur cetak ulang Sertifikat Pendidik karena Hilang: 1. Membuat surat permohonan menerbitkan surat keterangan pengganti serdik yang ditujukan ke kepala pusat PPG LP3. 2. Fotokopi KTP. 3. Surat kehilangan dari kepolisian. 4. Soft file foto ukuran 3 x 4 (khusus foto di kirim ke alamat email ppg@mail.unnes.ac.id). Berkas 1 - 3 dikirim ke LP3 UNNES dengan alamat Gedung Prof. Satmoko, Universitas Negeri Semarang, Kampus Sekaran, Kecamatan Gunungpati, Kota Semarang 50119.
+
+### Question:
+Bagaimana cara mengirim surat?
+Answer:
+Jika tujuan surat adalah rektor/wakil rektor UNNES, surat diserahkan ke Tata Usaha di gedung rektorat lantai 3 atau dapat dikirim melalui email subbagtu@mail.unnes.ac.id. Tujuan lainnya diserahkan ke TU/Frontdesk di tiap-tiap fakultas/unit.
+
+### Question:
+Dokumen apa yang diunggah jika orang tua tidak mempunyai slip gaji?
+Answer:
+Dokumen yang diunggah adalah surat keterangan penghasilan orang tua per bulan mengetahui RT setempat.
+
+### Question:
+Sulit menentukan titik lokasi rumah
+Answer:
+Untuk menentukan titik lokasi rumah, buka Google Maps, cari titik lokasi rumah Anda, dan cari titik koordinatnya. Lalu, masukkan koordinat tersebut dalam pengisian data pokok dengan memisahkannya menjadi latitude dan longitude.
+
+### Question:
+Saya tidak membayar biaya pendidikan saat SMA/MA/SMK, dokumen apa yang perlu dilampirkan saat pengisian?
+Answer:
+Jika saat SMA/MA/SMK gratis biaya pendidikan/ mendapat beasiswa/ mendapatkan subsidi, dapat melampirkan surat keterangan bebas biaya pendidikan dari sekolah.
+
+### Question:
+Di Sikadu mata kuliah saya muncul keterangan belum ditempuh padahal sudah ditempuh dan sudah ada nilainya di riwayat akademik
+Answer:
+Tidak masalah, abaikan keterangan status ditempuh di menu kurikulum. Yang terpenting di riwayat akademik sudah sesuai. Hal tersebut terjadi karena perbedaan kode mata kuliah yang diambil dengan kode mata kuliah yang dipaketkan di kurikulum. Saat proses SBVT, prodi akan melakukan ekivalensi kode mata kuliah tersebut.
+
+### Question:
+Nomor Virtual Account untuk pembayaran UKT tidak muncul
+Answer:
+Pada masa pembayaran registrasi administrasi (pembayaran UKT) mahasiswa dapat membuat VA secara mandiri melalui aplikasi Datapokok. Silakan cek kembali datapokok menu pembayaran UKT/SPP/SPI. Jika tidak dalam masa pembayaran UKT, anda dapat menuliskan aduan di laman unnes.ac.id/helpdesk (buat tiket baru).
+
+### Question:
+Bagaimana reset password email mahasiswa?
+Answer:
+Layanan reset password email baik email @students atau @mail hanya dapat dilakukan secara langsung di kantor ALT selama jam kerja dengan membawa KTM/Kartu Pegawai dan kartu Identitas. Jika berhalangan, pengguna dapat membuat surat kuasa dengan dibubuhi materai 10.000 rupiah.
+
+### Question:
+Saya lupa kata sandi/ password email.
+Answer:
+Layanan reset password email baik email @students atau @mail hanya dapat dilakukan secara langsung di kantor ALT selama jam kerja dengan membawa KTM/Kartu Pegawai dan kartu Identitas. Jika berhalangan, pengguna dapat membuat surat kuasa dengan dibubuhi materai 10.000 rupiah.
+
+### Question:
+Judul saya di laman wisuda salah, bagaimana menggantinya?
+Answer:
+Silakan cek specimen transkrip Anda di Sikadu menu pencetakan. Jika di specimen sudah benar, maka abaikan penulisan judul di laman wisuda. Tim Akademik akan mencetak transkrip sesuai specimen di laman Sikadu.
+
+### Question:
+Bagaimana cara mengisi KRS/ RS/ Rencana Studi/ mengambil mata kuliah?
+Answer:
+Pengisian rencana studi dapat dilakukan setelah melakukan registrasi administrasi (pembayaran UKT/ BPT) dan dilakukan sesuai jadwal yang telah ditentukan. Jika sudah melakukan registrasi administrasi, silakan login Sikadu pilih menu rencana studi, dan klik tanda plus pada mata kuliah yang akan diambil sesuai kurikulum.
+
+### Question:
+Apa akibatnya apabila mahasiswa tidak melakukan pembayaran UKT dan mengisi Rencana Studi sesuai jadwal dan ketentuan?
+Answer:
+Akibat bila tidak melakukan Registrasi Administrasi (membayar UKT/SPP/BPT):
+
+Mahasiswa yang tidak melakukan registrasi administrasi sesuai jadwal tidak diperkenankan mengikuti kegiatan akademik dan kemahasiswaan pada semester tersebut dengan status mahasiswa 'mangkir'.
+Bagi mahasiswa yang telah melakukan registrasi administrasi tetapi tidak melakukan registrasi akademik (mengisi Rencana Studi) sesuai jadwal yang ditentukan, maka mahasiswa dinyatakan 'tidak aktif'.
+Mahasiswa yang mangkir lebih dari 2 (dua) semester berturut-turut, dinyatakan putus studi (drop out).
+Mahasiswa yang terlambat atau tidak melaksanakan registrasi administrasi disarankan segera mengajukan permohonan cuti akademik secara online melalui myunnes sesuai jadwal.
+
+
+### Question:
+Daftar jadwal Rencana Studi belum muncul
+Answer:
+Penyebab jadwal belum muncul di daftar mahasiswa diantaranya:
+
+Mahasiswa belum diplot ke dalam kelas/rombongan belajar. Mahasiswa dapat menghubungi Korprodi atau tim jadwal Prodi untuk memasukkan data mahasiswa ke kelas tertentu.
+Jadwal belum dibuat atau sudah dibuat tapi belum ditampilkan. Mahasiswa dapat menghubungi Korprodi atau tim jadwal Prodi untuk melakukan pengecekan pada jadwal yang dimaksud.
+Mata kuliah yang dijadwalkan tidak ada dalam kurikulum mahasiswa. Mahasiswa dapat menghubungi Korprodi atau tim jadwal Prodi untuk melakukan pengecekan kurikulum, apakah kode mata kuliah dalam kurikulum sesuai dengan kode mata kuliah yang dijadwalkan
+
+
+### Question:
+Mengapa nilai saya tiba-tiba menjadi E?
+Answer:
+Nilai yang berubah menjadi E dengan nilai angka di bawah 10 dikarenakan nilai yang bermasalah dan tidak diselesaikan sampai 1 bulan setelah masa penilaian. Proses ini otomatis dijalankan setiap H+10 setelah pergantian semester.
+
+### Question:
+Berapa lama waktu pengurusan nilai yang bermasalah?
+Answer:
+Sesuai panduan akademik, nilai bermasalah dapat diselesaikan maksimal 30 hari setelah masa penilaian berakhir. Jika nilai tidak diurus maka nilai otomatis menjadi E.
+
+### Question:
+Apa yang perlu dilakukan kalau tumbuk jadwal?
+Answer:
+Jika terjadi tumbuk jadwal, mahasiswa dapat memilih jadwal lain yang tidak tumbuk jika masih tersedia. Jika jadwal tidak ada jadwal lain yang tersedia dapat menghubungi Korprodi atau tim jadwal Prodi.
+
+### Question:
+Apakah perbedaan jumlah pertemuan dan jumlah materi tersampaikan?
+Answer:
+Materi tersampaikan adalah materi mingguan sesuai dengan RPS yang sudah disampaikan dalam kegiatan belajar mengajar. Pada mata kuliah tertentu dalam satu minggu dapat terlaksana lebih dari satu kali pertemuan, misalkan matakuliah teori dan praktek. Oleh sebab itu bisa jadi satu materi mingguan disampaikan lebih dari 1x pertemuan.
+
+### Question:
+Apakah itu materi tersampaikan?
+Answer:
+Materi tersampaikan adalah materi mingguan sesuai dengan RPS yang sudah disampaikan dalam kegiatan belajar mengajar. Pada mata kuliah tertentu dalam satu minggu dapat terlaksana lebih dari satu kali pertemuan, misalkan matakuliah teori dan praktek. Oleh sebab itu bisa jadi satu materi mingguan disampaikan lebih dari 1x pertemuan.
+
+### Question:
+Pertemuan saya sudah lebih dari 14x tapi belum bisa isi nilai?
+Answer:
+Materi tersampaikan adalah materi mingguan sesuai dengan RPS yang sudah disampaikan dalam kegiatan belajar mengajar. Pada mata kuliah tertentu dalam satu minggu dapat terlaksana lebih dari satu kali pertemuan, misalkan matakuliah teori dan praktek. Oleh sebab itu bisa jadi satu materi mingguan disampaikan lebih dari 1x pertemuan. Solusi dapat cek melalui rekap mulang.
+
+### Question:
+Mengapa saya sudah ambil KRS tapi tidak muncul di daftar peserta mulang?
+Answer:
+Mahasiswa bisa tidak muncul di daftar peserta perkuliahan disebabkan karena KRS belum disetujui oleh dosen wali atau mata kuliah tersebut ditandai tidak dipakai pada bagian SBVT. Mahasiswa dapat menghubungi Dosen Wali atau Koorprodi untuk mendapatkan informasi lebih lengap
+
+### Question:
+Saya sudah memesan KRS tapi kok jadwal saya tidak ada?
+Answer:
+Pemesanan mata kuliah tidak ada kaitannya dengan proses akademik, pemesanan hanya digunakan untuk mempermudah tim jadwal membuat jadwal kelas. Untuk KRS harus diisikan setiap mahasiswa baik mahasiswa yang sudah pesan ataupun tidak pesan.
+
+### Question:
+Jadwal MKU tidak tampil pada daftar KRS yang akan diambil
+Answer:
+Jadwal yang tampil pada daftar KRS yang akan diambil mahasiswa memiliki kriteria sebagai berikut
+
+Mata kuliah masuk dalam kurikulum mahasiswa, silakan bisa dipastikan di bagian kurikulum pada Sikadu-&gt;Aktivitas Perkuliahan-&gt;tab Kurikulum.
+Mata kuliah harus dijadwalkan dan diset tampil, silakan hubungi tim jadwal MKU untuk memastikan bahwa jadwal tersebut sudah ada dan tampil.
+Daya tampung kelas masih ada. Jadwal yang daya tampungya sudah penuh tidak akan ditampilkan dalam pilihan KRS mahasiswa, silakan hubungi tim jadwal MKU untuk memastikan bahwa masih ada jadwal yang kosong.
+Jadwal kelas MKU yang diset khusus untuk prodi tertentu tidak akan tampil untuk mahasiswa di luar prodi tersebut.
+
+
+### Question:
+Saya kesulitan upload foto saat registrasi ulang.
+Answer:
+Pastikan foto yang terunggah berukuran 3x4, background berwarna merah, dan proporsi wajah lebih besar daripada background (foto lebih dekat/close up)
+
+### Question:
+Jatah SKS
+Answer:
+Berdasarkan panduan akademik, berikut jatah SKS normal sesuai dengan IP Semester yang diperoleh
+
+
+### Question:
+Bagaimana menghilangkan keterangan invalid parameter di Elena?
+Answer:
+Bila muncul kotak dengan judul 'Invalid Parameter' atau 'Parameter Tidak Sah', coba lakukan langkah-langkah di bawah ini:
+
+Matikan fitur Auto Translate. Pada banyak kasus, error ini muncul karena Chrome berusaha menterjemahkan tulisan dari bahasa Inggris ke bahasa Indonesia.
+Caranya mengatasinya: Klik: Settings &gt; Advanced &gt; Languages, kemudian di bawah menu 'Language', geser ke posisi off pada option berjudul 'Offer to translate pages that aren't in a language you read.'
+Alternatif lain yaitu memakai Google Chrome mode Incognito.
+Clear cache browser
+Restart HP/Laptop
+Akses internet lancar.
+
+
+### Question:
+Berapakah nilai rata-rata minimum untuk masuk UNNES?
+Answer:
+UNNES tidak pernah mempublikasikan nilai rata-rata minimum untuk masuk ke UNNES. Hal ini dikarenakan perbedaan peminat di setiap tahunnya dan juga adanya unsur reputasi sekolah yang dipertimbangkan saat pelaksanaan seleksi.
+
+### Question:
+Bagaimana cara klaim/mendapatkan lisensi Office 365/Microsoft dari UNNES?
+Answer:
+Silakan klik tautan berikut untuk register s.id/office365unnes. Tim ALT akan memproses dan mengirimkan lisensi ke email mahasiswa setiap Hari Senin pada jam kerja.
+
+### Question:
+Bagaimana cara membayar UKT/ BKT/ SPI?
+Answer:
+Pembayaran UKT/BKT/SPI dapat dilakukan di Bank tertentu dengan menunjukkan nomor Virtual Account yang diperoleh di aplikasi datapokok menu pembayaran UKT/SPP/SPI. Pelaksanaan pembayaran harus sesuai dengan jadwal yang telah ditentukan.
+
+### Question:
+Saya mau mengganti pilihan bank
+Answer:
+Untuk mengganti pilihan bank guna membayar UKT/ BPT, silakan memilih perintah untuk konsultasi langsung dengan CS ALT
+
+### Question:
+Bagaimana cara memperbaiki biodata?
+Answer:
+Bagi mahasiswa, silakan melakukan validasi identitas (nama, tempat tanggal lahir, nama gadis Ibu, NIK), di myunnes-students via apps.unnes.ac.id . Jika ada kesalahan mohon dapat melakukan perbaikan secara mandiri disertai dengan dokumen pendukung. 1. Jika yang akan diperbaiki adalah nama atau tempat dan tanggal lahir, mohon mengupload Ijazah terakhir 2. Jika NIK, mohon mengupload KTP/pasport 3. Jika nama gadis Ibu kandung sertakan Akta Kelahiran. Bagi pegawai silakan melakukan perbaikan di kepegawaian pusat
+
+### Question:
+bagaimana cara mendapatkan LoA (letter of acceptance) atau surat keterangan diterima di unnes?
+Answer:
+bagi mahasiswa baru, LoA (letter of acceptance) atau surat keterangan diterima di unnes dapat diberikan kepada mahasiswa baru yang telah memiliki NIM (Nomor Induk Mahasiswa). Prosedur pengajuan dengan menyampaikan permohonan di laman unnes.ac.id/helpdesk. Sementara untuk mahasiswa lama berupa Surat Keterangan Aktif Mahasiswa yang dapat diperoleh di prodi masing-masing
+
+### Question:
+apa saja status mahasiswa di UNNES?
+Answer:
+status mahasiswa UNNES terdiri dari mahasiswa aktif, mahasiswa cuti kuliah, dan mahasiswa tidak aktif. (1) mahasiswa aktif adalah mahasiswa yang telah terdaftar secara administratif di Sikadu pada semester berjalan dan terdaftar secara akademik, (2) mahasiswa cuti kuliah adalah mahasiswa yang berhenti kuliah sementara dan telah mengajukan cuti kuliah. Cuti kuliah terdiri atas cuti kuliah yang direncanakan dan cuti kuliah karena alasan khusus (yang tidak direncanakan), (3) mahasiswa tidak aktif
+
+### Question:
+berapa biaya kuliah di unnes?
+Answer:
+biaya kuliah di unnes dapat dilihat di tautan berikut. https://unnes.ac.id/admission/biaya-kuliah/
+
+### Question:
+apa yang dimaksud yudisium?
+Answer:
+Yudisium adalah pengumuman hasil studi mahasiswa berdasarkan penilaian akhir dari seluruh mata kuliah yang telah ditempuh mahasiswa dan penetapan nilai dalam transkrip akademik serta lulus atau tidaknya mahasiswa dalam menempuh studi selama jangka waktu tertentu, yang dilakukan oleh pejabat berwenang
+
+### Question:
+Apa Admisi dan Layanan Terpadu?
+Answer:
+Sesuai Peraturan Rektor Nomor 11 Tahun 2023 tentang Struktur dan Tata Kerja Organisasi di Bawah Rektor Universitas Negeri Semarang (UNNES) yang disahkan tanggal 6 April 2023, Unit Layanan Terpadu (ULT) dikembangkan menjadi Admisi dan Layanan Terpadu (ALT) dengan mengemban tugas sebagai berikut.
+
+Melakukan layanan penerimaan mahasiswa baru.
+Melakukan analisis dan evaluasi pelaksanaan penerimaan mahasiswa baru.
+Mengelola layanan pengaduan dari stakeholders.
+Pemberian layanan penyelesaian permasalahan akademik.
+Pemberian layanan penyelesaian permasalahan kemahasiswaan.
+Pemberian layanan penyelesaian permasalahan IT.
+Pemberian layanan penyelesaian permasalahan keuangan.
+Pemberian layanan penyelesaian permasalahan lain yang ada di UNNES.
+
+Jadi, ALT merupakan tempat pengaduan pertama bagi mahasiswa/ pegawai/ masyarakat umum/ calon mahasiswa baru yang memiliki kendala.Kanal Layanan:
+
+Laman unnes.ac.id/helpdesk pilih buat tiket baru, kemudian kakak bisa ngobrol dulu tentang aduan sama Agnes (Artificial Guide On UNNES)
+Telephone (024) 86008700 ext. 000.
+
+Jam Layanan:
+
+Senin s.d. Kamis: pukul 08.00 s.d. 15.00 WIB, istirahat pukul 12.00 s.d. 13.00 WIB
+Jumat: pukul 08.00 s.d. 14.00 WIB, istirahat pukul 11.30 s.d. 13.00 WIB
+
+
+### Question:
+Apa itu ALT?
+Answer:
+Sesuai Peraturan Rektor Nomor 11 Tahun 2023 tentang Struktur dan Tata Kerja Organisasi di Bawah Rektor Universitas Negeri Semarang (UNNES) yang disahkan tanggal 6 April 2023, Unit Layanan Terpadu (ULT) dikembangkan menjadi Admisi dan Layanan Terpadu (ALT) dengan mengemban tugas sebagai berikut.
+
+Melakukan layanan penerimaan mahasiswa baru.
+Melakukan analisis dan evaluasi pelaksanaan penerimaan mahasiswa baru.
+Mengelola layanan pengaduan dari stakeholders.
+Pemberian layanan penyelesaian permasalahan akademik.
+Pemberian layanan penyelesaian permasalahan kemahasiswaan.
+Pemberian layanan penyelesaian permasalahan IT.
+Pemberian layanan penyelesaian permasalahan keuangan.
+Pemberian layanan penyelesaian permasalahan lain yang ada di UNNES.
+
+Jadi, ALT merupakan tempat pengaduan pertama bagi mahasiswa/ pegawai/ masyarakat umum/ calon mahasiswa baru yang memiliki kendala.Kanal Layanan:
+
+Laman unnes.ac.id/helpdesk pilih buat tiket baru, kemudian kakak bisa ngobrol dulu tentang aduan sama Agnes (Artificial Guide On UNNES)
+Telephone (024) 86008700 ext. 000.
+
+Jam Layanan:
+
+Senin s.d. Kamis: pukul 08.00 s.d. 15.00 WIB, istirahat pukul 12.00 s.d. 13.00 WIB
+Jumat: pukul 08.00 s.d. 14.00 WIB, istirahat pukul 11.30 s.d. 13.00 WIB
+
+
+### Question:
+Bagaimana cara menyampaikan aduan/masalah/kendala?
+Answer:
+Sesuai Peraturan Rektor Nomor 11 Tahun 2023 tentang Struktur dan Tata Kerja Organisasi di Bawah Rektor Universitas Negeri Semarang (UNNES) yang disahkan tanggal 6 April 2023, Unit Layanan Terpadu (ULT) dikembangkan menjadi Admisi dan Layanan Terpadu (ALT) dengan mengemban tugas sebagai berikut.
+
+Melakukan layanan penerimaan mahasiswa baru.
+Melakukan analisis dan evaluasi pelaksanaan penerimaan mahasiswa baru.
+Mengelola layanan pengaduan dari stakeholders.
+Pemberian layanan penyelesaian permasalahan akademik.
+Pemberian layanan penyelesaian permasalahan kemahasiswaan.
+Pemberian layanan penyelesaian permasalahan IT.
+Pemberian layanan penyelesaian permasalahan keuangan.
+Pemberian layanan penyelesaian permasalahan lain yang ada di UNNES.
+
+Jadi, ALT merupakan tempat pengaduan pertama bagi mahasiswa/ pegawai/ masyarakat umum/ calon mahasiswa baru yang memiliki kendala.Kanal Layanan:
+
+Laman unnes.ac.id/helpdesk pilih buat tiket baru, kemudian kakak bisa ngobrol dulu tentang aduan sama Agnes (Artificial Guide On UNNES)
+Telephone (024) 86008700 ext. 000.
+
+Jam Layanan:
+
+Senin s.d. Kamis: pukul 08.00 s.d. 15.00 WIB, istirahat pukul 12.00 s.d. 13.00 WIB
+Jumat: pukul 08.00 s.d. 14.00 WIB, istirahat pukul 11.30 s.d. 13.00 WIB
+
+
+### Question:
+Bagaimana cara mencetak bukti pembayaran UKT/SPI/BPT
+Answer:
+Untuk mencetak bukti pembayaran UKT/SPP/BKT, kakak dapat memilih untuk menyampaikan aduan kepada CS ALT melalui tiket. Jangan lupa tuliskan juga pembayaran di semester ke berapa yang akan dicetak, untuk mempermudah teman Agnes. Terima kasih
+
+### Question:
+Email tidak ditemukan
+Answer:
+Layanan reset password email baik email @students atau @mail hanya dapat dilakukan secara langsung di kantor ALT selama jam kerja dengan membawa KTM/Kartu Pegawai dan kartu Identitas. Jika berhalangan, pengguna dapat membuat surat kuasa dengan dibubuhi materai 10.000 rupiah.
+
+### Question:
+Bagaimana membuat email unit/instansi/jurnal?
+Answer:
+Pemohon dapat membuat surat resmi kepada Direktur Sistem Informasi dan Humas. isi surat minimal berisi identitas penanggung jawab, nomor HP, email dan nama email yang dikehendaki. Surat dapat diserahkan langsung ke TU di UNNES Digital Center Lantai 1 atau melalui CS ALT.
+
+### Question:
+Kode OTP tidak terkirim ke email
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Bagaimana cara gabung BOT UNNES?
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Bagaimana join telegram UNNES?
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Saya tidak dapat install Telegram
+Answer:
+Untuk kasus aplikasi telegram tidak dapat diinstall dikarenakan blokade pada suatu negara, silakan hubungi langsung CS kami.
+
+### Question:
+Saya tidak bisa login karena email terblokir
+Answer:
+Email yang terblokir disebabkan karena ada pelanggaran baik teknis dengan servis Google atau pelanggaran kemahasiswaan. Silakan kunjungi kami di ALT untuk mengetahui info lebih lengkap.
+
+### Question:
+Judul di sikadu dan laman wisuda berbeda
+Answer:
+Silakan cek specimen transkrip kakak di sikadu menu pencetakkan, jika di specimen sudah benar, maka abaikan penulisan judul di laman wisuda. Tim Akademik akan mencetak transkrip sesuai specimen di laman sikadu menu pencetakkan.
+
+### Question:
+Keterangan mata kuliah belum ditempuh di SBVT
+Answer:
+Tidak masalah, abaikan keterangan status ditempuh di menu kurikulum sikadu, yang terpenting di riwayat akademik sudah sesuai nilainya. Hal tersebut terjadi karena perbedaan kode mata kuliah yang diambil dengan kode mata kuliah yang dipaketkan di kurikulum. Saat proses SBVT/Yudisium, koordinator prodi akan melakukan ekivalensi kode mata kuliah tersebut.
+
+### Question:
+Keterangan mata kuliah belum ditempuh di kurikulum padahal sudah ada nilainya
+Answer:
+Tidak masalah, abaikan keterangan status ditempuh di menu kurikulum sikadu, yang terpenting di riwayat akademik sudah sesuai nilainya. Hal tersebut terjadi karena perbedaan kode mata kuliah yang diambil dengan kode mata kuliah yang dipaketkan di kurikulum. Saat proses SBVT/Yudisium, koordinator prodi akan melakukan ekivalensi kode mata kuliah tersebut.
+
+### Question:
+Bagaimana cara klaim Windows 10/11 Education?
+Answer:
+Yuk simak video berikut https://www.youtube.com/watch?v=rVkOGkXlwX4.
+
+### Question:
+apa yang dimaksud sks?
+Answer:
+terdapat dua istilah yang digunakan UNNES yaitu satuan kredit semester (sks) dan sistem kredit semester (SKS). satuan kredit semester (sks) adalah takaran waktu kegiatan belajar yang dibebankan pada mahasiswa per minggu per semester dalam proses pembelajaran melalui berbagai bentuk pembelajaran atau besarnya pengakuan atas keberhasilan usaha mahasiswa dalam mengikuti kegiatan kurikuler di suatu program studi. sedangkan sistem kredita semester (SKS) adalah sistem penyelenggaraan pendidikan yang menggunakan satuan kredit semester (sks) untuk menyatakan beban belajar mahasiswa, beban kerja dosen, pengalaman belaja, dan beban penyelenggaraan program.
+
+### Question:
+Apa yang dimaksud semester antara?
+Answer:
+Semester adalah satuan waktu kegiatan yang tersusun atas 16 minggu kegiatan kuliah/ perkuliahan dan kegiatan akademik terjadwal lainnya, termasuk dua minggu kegiatan penilaian yang diselenggarakan antara semester gasal dan semester genap dengan beban belajar sebanyak-banyak 9 sks.
+
+### Question:
+Saya penerima KIP Kuliah, apakah bisa mendaftar selain KIP Kuliah?
+Answer:
+Mahasiswa penerima KIP Kuliah dapat mengajukan beasiswa lainnya asalkan sumber dana beasiswa berbeda dengan KIP Kuliah (APBN), kecuali jika ada ketentuan lain di kontrak beasiswa selain KIP Kuliah
+
+### Question:
+Jika tidak berlangganan listrik, air dan/atau telepon, dokumen apa yang harus diunggah?
+Answer:
+Sebaiknya membuat Surat Keterangan tidak berlangganan listrik, air dan/atau telepon. Surat keterangan diketahui RT setempat.
+
+### Question:
+Apakah ada ketentuan warna sampul/cover penjilidan borang A1?
+Answer:
+Bebas. Tidak ada ketentuan warna sampul/cover borang A1.
+
+### Question:
+Bagaimana cara mendapatkan pin ijazah
+Answer:
+perlu kami sampaikan bahwa setelah dosen pembimbing mengakhiri bimbingan di sitedi, pada akun jurusan akan muncul tools untuk order pin. pemunculan tools ini maksimal 2x24 jam setelah bimbingan di akhiri. jika di akun jurusan belum muncul juga setelah 2x24 jam, silakan jurusan menghubungi pengelola pddikti pusat di bagian akademik, kemahasiswaan, dan konservasi - DAKK untuk penyelesaian masalah tersebut. terima kasih
+
+### Question:
+Judul di laman wisuda salah
+Answer:
+Silakan cek specimen transkrip kakak di sikadu menu pencetakkan, jika di specimen transkrip sudah benar, maka abaikan penulisan judul di laman wisuda. Tim DAKK akan mencetak transkrip sesuai specimen di laman sikadu menu pencetakkan. Akan tetapi jika di specimen transkrip kakak salah, silakan ikuti langkah berikut untuk memperbaiki judul.&nbsp;
+
+Meminta memo dari jurusan ditujukan kepada koordinator ALT untuk membatalkan SBVT. Memo silakan dikirim melalui tiket aduan yang sama dengan nomor tiket permohonan ATAU Jurusan/Prodi meminta langsung kepada ALT, maka tidak perlu memo.&nbsp;
+ALT akan melakukan pembatalan validasi SBVT jika dokumen belum dicetak dan menginformasikan kepada mahasiswa.&nbsp;
+Mahasiswa konfirmasi ke jurusan bahwa ALT sudah membatalkan validasi SBVT.&nbsp;
+Jurusan login Sikadu 2.0 dengan level sebagai supervisor jurusan untuk mengedit judul skripsi/tesis/disertasi melalui menu SBVT.
+Jurusan melakukan validasi SBVT kembali.
+Mahasiswa cek di specimen transkrip apakah judul sudah berubah atau belum. Silakan cek dengan cara unduh di laman Sikadu 2.0 mahasiswa&gt;pencetakan atau di menu SBVT supervisor jurusan.
+Proses selesai.
+
+
+### Question:
+Judul skripsi/ tesis/ disertasi saya salah, bagaimana memperbaikinya?
+Answer:
+Jika mahasiswa belum melakukan SBVT, silakan langsung ke langkah 4. Jika sudah melakukan SBVT, silakan ikuti langkah 1-7 berikut untuk memperbaiki judul skripsi/ tesis/ disertasi:
+
+Meminta memo dari jurusan ditujukan kepada koordinator ALT untuk membatalkan SBVT. Memo silakan dikirim melalui tiket aduan yang sama dengan nomor tiket permohonan ATAU Jurusan/Prodi meminta langsung kepada ALT, maka tidak perlu memo.&nbsp;
+ALT akan melakukan pembatalan validasi SBVT jika dokumen belum dicetak dan menginformasikan kepada mahasiswa.&nbsp;
+Mahasiswa konfirmasi ke jurusan bahwa ALT sudah membatalkan validasi SBVT.&nbsp;
+Jurusan login Sikadu 2.0 dengan level sebagai supervisor jurusan untuk mengedit judul skripsi/tesis/disertasi melalui menu SBVT.
+Jurusan melakukan validasi SBVT kembali.
+Mahasiswa cek di specimen transkrip apakah judul sudah berubah atau belum. Silakan cek dengan cara unduh di laman Sikadu 2.0 mahasiswa&gt;pencetakan atau di menu SBVT supervisor jurusan.
+Proses selesai.
+
+
+### Question:
+Bagaimana cara memperbaiki judul skripsi/ tesis/disertasi?
+Answer:
+Jika mahasiswa belum melakukan SBVT, silakan langsung ke langkah 4. Jika sudah melakukan SBVT, silakan ikuti langkah 1-7 berikut untuk memperbaiki judul skripsi/ tesis/ disertasi:
+
+Meminta memo dari jurusan ditujukan kepada koordinator ALT untuk membatalkan SBVT. Memo silakan dikirim melalui tiket aduan yang sama dengan nomor tiket permohonan ATAU Jurusan/Prodi meminta langsung kepada ALT, maka tidak perlu memo.&nbsp;
+ALT akan melakukan pembatalan validasi SBVT jika dokumen belum dicetak dan menginformasikan kepada mahasiswa.&nbsp;
+Mahasiswa konfirmasi ke jurusan bahwa ALT sudah membatalkan validasi SBVT.&nbsp;
+Jurusan login Sikadu 2.0 dengan level sebagai supervisor jurusan untuk mengedit judul skripsi/tesis/disertasi melalui menu SBVT.
+Jurusan melakukan validasi SBVT kembali.
+Mahasiswa cek di specimen transkrip apakah judul sudah berubah atau belum. Silakan cek dengan cara unduh di laman Sikadu 2.0 mahasiswa&gt;pencetakan atau di menu SBVT supervisor jurusan.
+Proses selesai.
+
+
+### Question:
+Judul skripsi/tesis/disertasi salah
+Answer:
+Jika mahasiswa belum melakukan SBVT, silakan langsung ke langkah 4. Jika sudah melakukan SBVT, silakan ikuti langkah 1-7 berikut untuk memperbaiki judul skripsi/ tesis/ disertasi:
+
+Meminta memo dari jurusan ditujukan kepada koordinator ALT untuk membatalkan SBVT. Memo silakan dikirim melalui tiket aduan yang sama dengan nomor tiket permohonan ATAU Jurusan/Prodi meminta langsung kepada ALT, maka tidak perlu memo.&nbsp;
+ALT akan melakukan pembatalan validasi SBVT jika dokumen belum dicetak dan menginformasikan kepada mahasiswa.&nbsp;
+Mahasiswa konfirmasi ke jurusan bahwa ALT sudah membatalkan validasi SBVT.&nbsp;
+Jurusan login Sikadu 2.0 dengan level sebagai supervisor jurusan untuk mengedit judul skripsi/tesis/disertasi melalui menu SBVT.
+Jurusan melakukan validasi SBVT kembali.
+Mahasiswa cek di specimen transkrip apakah judul sudah berubah atau belum. Silakan cek dengan cara unduh di laman Sikadu 2.0 mahasiswa&gt;pencetakan atau di menu SBVT supervisor jurusan.
+Proses selesai.
+
+
+### Question:
+Apakah penerima KIP Kuliah boleh pindah program studi atau daftar KIP Kuliah kembali?
+Answer:
+Penerima KIP Kuliah tidak diperbolehkan mendaftar KIP Kuliah kembali di tahun selanjutnya baik di Perguruan Tinggi yang sama atau lainnya. Termasuk terkait pindah program studi tidak diperbolehkan.
+
+### Question:
+Dokumen scan/foto PBB kepemilikan tempat tinggal itu yang discan yang ada rumahnya saja?
+Answer:
+Tidak, lampirkan semua scan/foto PBB yang dimiliki.
+
+### Question:
+Bagaimana jika sudah mengisi data dan sudah disimpan tapi saat dibuka kembali datanya hilang?
+Answer:
+Biasanya terjadi karena ukuran file terlalu besar atau format tidak sesuai (maksimal ukuran foto 1 MB dengan format .jpg) Disarankan mengisi data dengan mengunakan laptop/PC , tidak melalui smartphone.
+
+### Question:
+apa perbedaan kategori 1 , 2, 3, dan 4 di KIP Kuliah 2023?
+Answer:
+1. Kategori 1 menunjukkan bahwa calon mahasiswa merupakan penerima KIP semasa sekolah menengah. jika calon mahasiswa telah menerima bantuan KIP saat duduk di bangku SMA atau sederajat, maka saat calon mahasiswa mendaftar KIP Kuliah akan masuk ke dalam kategori 1 2. Kategori 2 diperuntukkan bagi calon penerima yang sudah terdaftar dalam DTKS (Data Terpadu Kesejahteraan Sosial). Jika calon mahasiswa terdaftar dalam DTKS, maka pendaftaran KIP Kuliah akan masuk ke dalam kategori 2 3. Kategori 3 ditujukan bagi pendaftar yang namanya telah terdata pada Data Pensasaran Percepatan Penghapusan Kemiskinan Ekstrim (P3KE). Jika telah tercatat dalam P3KE desil 1/ desil 2/ desil 3, maka pendaftaran KIP Kuliah akan masuk kategori 3 4. Kategori 4 merupakan kategori yang dikhususkan bagi penerima yang mendaftar dengan memberikan informasi mengenai penghasilan orang tua. Selain itu, kategori 4 juga diperuntukkan bagi pendaftar yang menyertakan surat keterangan tidak mampu.
+
+### Question:
+Bagaimana cara kerja petugas ult dalam menangani aduan?
+Answer:
+Aduan yang dituliskan memiliki nomor tiket masing-masing dan akan diproses pada jam kerja oleh petugas ALT sesuai antrian berdasarkan waktu pembuatan aduan. Petugas akan melakukan pengecekan dan eksekusi langsung jika deskripsi aduan sudah memuat seluruh data yang petugas butuhkan, jika ada data yang kurang, petugas akan meminta melengkapi data yang dibutuhkan melalui tiket tersebut. Jawaban akhir/ solusi/ arahan akan disampaikan juga di tiket tersebut. Apabila aduan tidak dapat diselesaikan langsung oleh petugas, tiket aduan akan diteruskan ke petugas lain yang berwenang di unit terkait, seperti bagian akademik, keuangan, IT, kemahasiswaan, dan bagian lainnya. Seluruh proses penyelesaian aduan dapat ditelusuri melalui akun masing-masing user
+
+### Question:
+Bagaimana mendapatkan lisensi windows?
+Answer:
+Yuk simak video berikut https://www.youtube.com/watch?v=rVkOGkXlwX4
+
+### Question:
+Bagaimana cara join telegram?
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Saya tidak bisa join telegram
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Bagaimana cara join telegram UNNES Student Info
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Bagaimana cara join telegram UNNES Info
+Answer:
+UNNES memiliki 2 (dua) bot telegram resmi untuk pegawai dan mahasiswa aktif, bagi pegawai yang sudah pensiun dan mahasiswa yang sudah lulus, tidak dapat melakukan join kembali. Pegawai menggunakan bot ""UNNES INFO"" dan mahasiswa menggunakan bot ""UNNES STUDENT INFO"".
+Cara join kedua bot secara teknis adalah sama. Berikut kami contohkan langkah-langkah join telegram bagi mahasiswa.
+
+Install aplikasi Telegram (unduh di app store/ play store) melalui smartphone kakak,
+Aktivasi telegram kakak dengan nomor yang aktif,
+Search ""UNNES STUDENT INFO"" atau ""@UNNES_STUDENT_INFO_Bot"" bagi mahasiswa dan search ""UNNES INFO"" atau ""@UNNES_INFO_Bot"" bagi pegawai,
+Klik tombol ""Start"" atau tulis /start,
+Ikuti petunjuk yang ada di layar smartphone,
+Jika muncul balasan ""Silakan ketikkan email anda""; bagi mahasiswa silakan tuliskan email mahasiswa dengan domain namaemail@students.unnes.ac.id (jangan lupa tulis student pakai s) dan bagi pegawai silakan tuliskan email pegawai dengan domain @mail.unnes.ac.id; Jika di langkah ini salah mengetikkan email, silakan ulangi langkah 4.
+Jika muncul balasan ""Baik, terima kasih. Silakan ketikkan password OTP yang terkirim ke Email Anda; silakan login email untuk melihat kode OTP.
+Jika muncul balasan ""kode OTP salah, silakkan ketikkan email anda""; mohon ketikkan kembali email anda kembali. Jangan menuliskan karakter apapun yang tidak diminta, seperti NIM atau password email kakak.
+Jika berhasil mengikuti langkah di atas, Anda akan disambut oleh ""Selamat datang, Nama Anda"".
+
+Selanjutnya, kakak dapat memanfaatkan Bot UNNES tersebut untuk berbagai hal dengan cara menuliskan tanda garis miring (/) diikuti perintah. Sebagai contoh untuk akses wifi UNNES-ID, silakan tulis /internet.
+
+### Question:
+Apakah ada group telegram untuk wisudawan?
+Answer:
+Group Telegram bagi wisudawan periode tertentu akan muncul di laman wisuda setelah melakukan finalisasi wisuda
+
+### Question:
+Mengapa nilai saya di sikadu tanda tanya?
+Answer:
+Untuk kasus nilai mhs belum muncul (muncul tanda tanya ?) atau registrasi sudah ok tetapi tertulis belum registrasi ada 3 kondisi yang menyebabkan hal ini, yaitu sebagai berikut.
+
+Mahasiswa belum melunasi pembayaran UKT. Bisa dicek di halaman pembayaran ukt mahasiswa pada aplikasi datapokok.
+Ada kemungkinan sudah membayar tapi belum masuk ke sistem pembayaran, untuk kondisi ini silakan pilih konsultasi langsung dengan Customer Service ALT.
+Dosen belum menginput nilai mahasiswa
+
+
+### Question:
+Nilai saya belum muncul
+Answer:
+Untuk kasus nilai mhs belum muncul (muncul tanda tanya ?) atau registrasi sudah ok tetapi tertulis belum registrasi ada 3 kondisi yang menyebabkan hal ini, yaitu sebagai berikut.
+
+Mahasiswa belum melunasi pembayaran UKT. Bisa dicek di halaman pembayaran ukt mahasiswa pada aplikasi datapokok.
+Ada kemungkinan sudah membayar tapi belum masuk ke sistem pembayaran, untuk kondisi ini silakan pilih konsultasi langsung dengan Customer Service ALT.
+Dosen belum menginput nilai mahasiswa
+
+
+### Question:
+Bagaimana cara melakukan legalisir ijazah/transkrip nilai?
+Answer:
+Dokumen yang sudah tertandatangani secara elektronik (tte) baik ijazah, transkrip, dan SKPI tidak perlu dilakukan legalisasi lagi, cukup disampaikan ke stakeholder (pihak yang membutuhkan) agar dapat melakukan pengecekan pada laman seperti yang tertera di ijazah atau transkrip lulusan.
+Namun untuk dokumen yang belum tertandatangani secara elektronik ataupun stakeholder yang tetap menginginkan legalisasi secara manual, maka proses legalisasi ijazah dan transkrip akademik dapat dilakukan secara daring melalui sistem satulayanan.unnes.ac.id atau secara luring datang langsung ke fakultas.
+
+### Question:
+Bagaimana cara mendaftar menjadi mahasiswa UNNES?
+Answer:
+Untuk program Diploma (D3) dan Sarjana (S1) UNNES membuka penerimaan melalui jalur Seleksi Nasional Penerimaan Mahasiswa Baru (SNPMB) baik Seleksi Nasional Berdasarkan Prestasi (SNBP) ataupun Seleksi Nasional Berdasarkan Tes (SNBT). Selain&nbsp;seleksi secara nasional, UNNES juga membuka penerimaan mahasiswa baru melalui Seleksi Mandiri (SM-UNNEs).&nbsp;
+Untuk program Magister (S2) dan Doktor (S3) UNNES membuka penerimaan melalui jalur Seleksi Mandiri (SM-UNNES) yang meliputi SM Reguler, SM Rekognisi Pembelajaran Lampau (RPL), SM Research, dan SM Fast Track. UNNES juga menjalin kerjasama dengan beberapa instansi untuk meningkatkan kompetensi mereka. Bagi instansi yang menghendaki kerjasama untuk program Magister dan Doktor dapat berhubungan dengan Program Studi atau Direktorat Akademik, Kemahasiswaan, dan Konservasi di UNNES.Selain program berjenjang, UNNES juga menerima Program Profesi diantaranya Program Profesi Guru (PPG) dan Program Profesi Konselor.Di UNNES juga membuka program tidak berjenjang (non-degree) yang dikhususkan untuk mahasiswa Internasional yaitu program Short Course dan program Credit Transfer.
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission.
+
+### Question:
+Bagaimana mendaftar menjadi mahasiswa baru?
+Answer:
+Untuk program Diploma (D3) dan Sarjana (S1) UNNES membuka penerimaan melalui jalur Seleksi Nasional Penerimaan Mahasiswa Baru (SNPMB) baik Seleksi Nasional Berdasarkan Prestasi (SNBP) ataupun Seleksi Nasional Berdasarkan Tes (SNBT). Selain&nbsp;seleksi secara nasional, UNNES juga membuka penerimaan mahasiswa baru melalui Seleksi Mandiri (SM-UNNEs).&nbsp;
+Untuk program Magister (S2) dan Doktor (S3) UNNES membuka penerimaan melalui jalur Seleksi Mandiri (SM-UNNES) yang meliputi SM Reguler, SM Rekognisi Pembelajaran Lampau (RPL), SM Research, dan SM Fast Track. UNNES juga menjalin kerjasama dengan beberapa instansi untuk meningkatkan kompetensi mereka. Bagi instansi yang menghendaki kerjasama untuk program Magister dan Doktor dapat berhubungan dengan Program Studi atau Direktorat Akademik, Kemahasiswaan, dan Konservasi di UNNES.Selain program berjenjang, UNNES juga menerima Program Profesi diantaranya Program Profesi Guru (PPG) dan Program Profesi Konselor.Di UNNES juga membuka program tidak berjenjang (non-degree) yang dikhususkan untuk mahasiswa Internasional yaitu program Short Course dan program Credit Transfer.
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission.
+
+### Question:
+Apa akreditasi prodi/ program studi di unnes?
+Answer:
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission
+
+### Question:
+Bagaimana cara mendapatkan legalisir sertifikat Akreditasi Perguruan Tinggi?
+Answer:
+Untuk mendapatkan file sertifikat, silakan unduh di laman https://unnes.ac.id/kpm/en/accreditation-and-certification-list/ sedangkan untuk legalisasi sertifikat Akreditasi Institusi Perguruan Tinggi (AIPT) dilayani oleh Kantor Admisi dan Layanan Terpadu di gedung rektorat lantai 1. Batas maksimal dokumen yang dilegalisasi adalah 3 lembar dan tidak dipungut biaya. Sedangkan untuk legalisasi sertifikat akreditasi prodi, silakan dapat dilakukan secara offline di fakultas masing-masing, untuk legalisasi ijazah dan transkrip dapat dilakukan secara online melalui laman https://satulayanan.unnes.ac.id dan secara offline di fakultas masing-masing, untuk legalisasi sertifikat pendidik dapat dilakukan secara offline di gedung Prof. Satmoko, dan untuk legalisasi akta mengajar dilakukan secara offline di Fakultas Ilmu Pendidikan dan Psikologi (FIPP).
+
+### Question:
+Bagaimana mencari file dan informasi akreditasi prodi maupun Perguruan Tinggi?
+Answer:
+Untuk mendapatkan file sertifikat, silakan unduh di laman https://unnes.ac.id/kpm/en/accreditation-and-certification-list/ sedangkan untuk legalisasi sertifikat Akreditasi Institusi Perguruan Tinggi (AIPT) dilayani oleh Kantor Admisi dan Layanan Terpadu di gedung rektorat lantai 1. Batas maksimal dokumen yang dilegalisasi adalah 3 lembar dan tidak dipungut biaya. Sedangkan untuk legalisasi sertifikat akreditasi prodi, silakan dapat dilakukan secara offline di fakultas masing-masing, untuk legalisasi ijazah dan transkrip dapat dilakukan secara online melalui laman https://satulayanan.unnes.ac.id dan secara offline di fakultas masing-masing, untuk legalisasi sertifikat pendidik dapat dilakukan secara offline di gedung Prof. Satmoko, dan untuk legalisasi akta mengajar dilakukan secara offline di Fakultas Ilmu Pendidikan dan Psikologi (FIPP).
+
+### Question:
+Saya mau minta sertifikat akreditasi
+Answer:
+Sertifikat akreditasi dapat diakses di laman berikut https://unnes.ac.id/kpm/en/accreditation-and-certification-list/ silakan dapat dilegalisir di prodi untuk sertifikat akreditasi prodi dan dilegalisir di kantor admisi dan layanan terpadu di gedung rektorat lantai 1 untuk sertifikat akreditasi institusi
+
+### Question:
+Bagaimana jadwal kuliah di UNNES?
+Answer:
+Penjadwalan dan kegiatan akademik lainnya dapat ditanyakan di masing-masing Program Studi.&nbsp;Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission
+
+### Question:
+Apa saja jalur masuk UNNES?
+Answer:
+Untuk program Diploma (D3) dan Sarjana (S1) UNNES membuka penerimaan melalui jalur Seleksi Nasional Penerimaan Mahasiswa Baru (SNPMB) baik Seleksi Nasional Berdasarkan Prestasi (SNBP) ataupun Seleksi Nasional Berdasarkan Tes (SNBT). Selain&nbsp;seleksi secara nasional, UNNES juga membuka penerimaan mahasiswa baru melalui Seleksi Mandiri (SM-UNNEs).&nbsp;
+Untuk program Magister (S2) dan Doktor (S3) UNNES membuka penerimaan melalui jalur Seleksi Mandiri (SM-UNNES) yang meliputi SM Reguler, SM Rekognisi Pembelajaran Lampau (RPL), SM Research, dan SM Fast Track. UNNES juga menjalin kerjasama dengan beberapa instansi untuk meningkatkan kompetensi mereka. Bagi instansi yang menghendaki kerjasama untuk program Magister dan Doktor dapat berhubungan dengan Program Studi atau Direktorat Akademik, Kemahasiswaan, dan Konservasi di UNNES.Selain program berjenjang, UNNES juga menerima Program Profesi diantaranya Program Profesi Guru (PPG) dan Program Profesi Konselor.Di UNNES juga membuka program tidak berjenjang (non-degree) yang dikhususkan untuk mahasiswa Internasional yaitu program Short Course dan program Credit Transfer.
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission.
+
+### Question:
+UNNES membuka jalur apa saja?
+Answer:
+Untuk program Diploma (D3) dan Sarjana (S1) UNNES membuka penerimaan melalui jalur Seleksi Nasional Penerimaan Mahasiswa Baru (SNPMB) baik Seleksi Nasional Berdasarkan Prestasi (SNBP) ataupun Seleksi Nasional Berdasarkan Tes (SNBT). Selain&nbsp;seleksi secara nasional, UNNES juga membuka penerimaan mahasiswa baru melalui Seleksi Mandiri (SM-UNNEs).&nbsp;
+Untuk program Magister (S2) dan Doktor (S3) UNNES membuka penerimaan melalui jalur Seleksi Mandiri (SM-UNNES) yang meliputi SM Reguler, SM Rekognisi Pembelajaran Lampau (RPL), SM Research, dan SM Fast Track. UNNES juga menjalin kerjasama dengan beberapa instansi untuk meningkatkan kompetensi mereka. Bagi instansi yang menghendaki kerjasama untuk program Magister dan Doktor dapat berhubungan dengan Program Studi atau Direktorat Akademik, Kemahasiswaan, dan Konservasi di UNNES.Selain program berjenjang, UNNES juga menerima Program Profesi diantaranya Program Profesi Guru (PPG) dan Program Profesi Konselor.Di UNNES juga membuka program tidak berjenjang (non-degree) yang dikhususkan untuk mahasiswa Internasional yaitu program Short Course dan program Credit Transfer.
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission.
+
+### Question:
+Apabila saya diterima menjadi mahasiswa jalur non KIP-K, apakah saya dapat mengajukan KIP-K?
+Answer:
+Sesuai panduan penerimaan KIP-K, mahasiswa baru dapat mengajukan usulan di semester 2 dengan catatan kuota penerima KIP-K masih tersedia.
+
+### Question:
+Apakah bisa mengubah pilihan jalur seleksi di laman pendaftaran KIP Kuliah?
+Answer:
+Jika sudah memilih salah satu jalur seleksi, maka tidak bisa diubah.
+
+### Question:
+Saya tidak bisa membayar UKT/SPP/BKT/SPI
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Bagaimana cara membayar UKT/ SPP/ BKT/ SPI?
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Saya terlambat membayar UKT
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+Jika anda terlambat melakukan pembayaran silakan lapor ke bagian Layanan Akademik dan Kemahasiswaan di Direktorat Akademik, Kemahasiswaan, dan Konservasi di gedung rektorat UNNES lantai 1.
+
+### Question:
+Nomor Virtual Account (VA) tidak muncul
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Mengapa Nomor Virtual Account (VA) untuk pembayaran UKT/SPP/BPT tidak ada di datapokok?
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Nomor VA tidak bisa dibayarkan
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Nomor VA Error
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+mau membayar tunggakan
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Tidak bisa membayar angsuran
+Answer:
+Pembayaran UKT (Uang Kuliah Tunggal) untuk mahasiswa jenjang D3 dan S1, SPP (Sumbangan Pembinaan Pendidikan) atau BPT (Biaya Perkuliahan Tunggal) untuk jenjang S2 dan S3&nbsp; yang dibayarkan tiap semester. Pembayaran SPI (Sumbangan Pengembangan Institusi) hanya untuk mahasiswa baru jenjang sarjana dan diploma untuk jalur penerimaan tertentu yang dibayarkan 1x di awal semester 1. Langkah-langkah pembayaran:
+
+Login apps.unnes.ac.id&gt; aplikasi&gt;datapokok,&nbsp;
+Pilih menu registrasi&gt; informasi UKT, untuk melihat nominal UKT yang perlu dibayarkan,&nbsp;
+Pilih menu registrasi&gt; Pembayaran UKT/ SPP/ SPI&gt; pilih Bank&gt; tunggu nomor Virtual Account muncul. Jika sudah ada VA tetapi muncul keterangan Expired, silakan klik request ulang VA&nbsp;
+Klik prosedur pembayaran untuk mengetahui cara pembayaran agar pembayaran dapat dilakukan sinkronisasi dengan aplikasi UNNES,&nbsp;
+Lakukan pembayaran sesuai cara pembayaran dan pada periode jadwal pembayaran.&nbsp;
+Bagi yang memiliki tunggakan, silakan pilih menu Tunggakan UKT/SPP/SPI. Silakan bayarkan tunggakan menggunakan nomor VA pada semester aktif.
+
+
+### Question:
+Bagaimana cara membayar angsuran?
+Answer:
+Universitas Negeri Semarang memberikan kebijakan pembayaran UKT dengan cara mengangsur. Silakan simak surat terlampir. Untuk mekanisme pembayrannya silakan pilih bank di laman datapokok&gt;pembayaran UKT&gt; kemudian kakak akan mendapatkan NOMOR VIRTUAL ACCOUNT (NOMOR VA)&gt; bayarkan 50% dari total tagihan yang tertera
+
+### Question:
+Bagaimana cara mengajuan situs/ hosting dan subdomain UNNES?
+Answer:
+Perlu kami sampaikan bahwa layanan hosting dan domain kami khusus untuk kepentingan lembaga/BEM/Hima/UKM dsb. Sedangkan untuk keperluan personal silakan dapat memanfaatkan blog.unnes.ac.id.
+Pengajuan hosting dan domain, silakan membuat surat resmi kepada Direktur Sistem Informasi dan Humas UNNES selanjutnya surat dapat diserahkan ke TU di UNNES Digital Center.
+
+### Question:
+muncul invalid parameter saat mengakses elena
+Answer:
+Bila muncul kotak dengan judul 'Invalid Parameter' atau 'Parameter Tidak Sah', coba lakukan langkah-langkah di bawah ini:
+
+Matikan fitur Auto Translate. Pada banyak kasus, error ini muncul karena Chrome berusaha menterjemahkan tulisan dari bahasa Inggris ke bahasa Indonesia.
+Caranya mengatasinya: Klik: Settings &gt; Advanced &gt; Languages, kemudian di bawah menu 'Language', geser ke posisi off pada option berjudul 'Offer to translate pages that aren't in a language you read.'
+Alternatif lain yaitu memakai Google Chrome mode Incognito.
+Clear cache browser
+Restart HP/Laptop
+Akses internet lancar.
+
+
+### Question:
+Apa sanksinya apabila mahasiswa tidak melakukan pembayaran UKT dan mengisi Rencana Studi?
+Answer:
+Sanksi bila tidak melakukan Registrasi Administrasi (membayar UKT/SPP/BKT) :
+
+Mahasiswa yang tidak melakukan registrasi administrasi seseuai jadwal dinyatakan tidak terdaftar sebagai mahasiswa UNNES dan tidak diperkenankan melakukan kegiatan akademik dan kemahasiswaan pada semester tersebut dengan status mahasiswa ""tidak aktif"".&nbsp;
+Bagi Mahasiswa yang telah melakukan registrasi administrasi tetapi tidak melakukan registrasi akademik (mengisi Rencana Studi) sesuai jadwal yang ditentukan, maka mahasiswa dinyatakan ""tidak aktif"" .&nbsp;
+Mahasiswa yang terlambat atau tidak melaksanakan registrasi administrasi disarankan segera mengajukan permohonan cuti akademik secara online melalui myunnes sesuai jadwal.&nbsp;
+Mahasiswa yang tidak terdaftar lebih dari 2 (dua) semester kumulatif dan berturut-turut, dinyatakan putus studi (drop out).&nbsp;
+Bagi mahasiswa yang hanya mengambil mata kuliah skripsi/tesis/disertasi/KKN/PKL/PPL/Mata kuliah non jadwal/ Mata kuliah rekognisi, silakan menghubungi Customer Service ALT
+
+
+### Question:
+Apakah bisa mengajukan pindah prodi? Syaratnya apa saja?
+Answer:
+Mahasiswa dapat mengajukan permohonan pindah program studi dengan ketentuan sebagai berikut.
+
+Waktu pindah program studi adalah pada awal semester III (setelah memperoleh nilai hasil studi semester II) atau semester V (setelah memperoleh nilai hasil studi semester IV). Masa studi yang sudah dijalani dihitung sebagai bagian dari masa studi secara keseluruhan.&nbsp;
+Mahasiswa dapat mengajukan pindah program studi dengan alasan:&nbsp;
+
+sakit atau cacat tertentu sehingga tidak mampu melaksanakan tugas perkuliahan pada program studi yang dijalani dan
+secara akademik tidak mampu mengikuti perkuliahan di prodi yang dijalani.
+
+
+Persyaratan akademik yang harus dipenuhi oleh mahasiswa yang akan pindah program studi adalah IPK maksimal 2,0 dengan nilai mata kuliah MKU minimal B dan syarat lain yang ditentukan oleh Jurusan yang dituju.
+Mahasiswa yang akan pindah program studi adalah mahasiswa berstatus aktif pada semester sebelumnya dan harus memenuhi persyaratan administratif berupa
+
+surat rekomendasi dari pembimbing akademik;
+surat rekomendasi pindah program studi dari Pusat Pengembangan Layanan Konseling, Bursa Kerja, MKU dan MKDK;
+surat rekomendasi dari dokter jika alasannya sakit;
+surat persetujuan dari Ketua Jurusan asal;
+surat pengantar dari Jurusan asal ke Jurusan yang dituju;
+surat persetujuan dari Ketua Jurusan yang akan dituju.&nbsp;
+
+
+Mahasiswa yang akan pindah program studi mengajukan permohonan secara tertulis kepada Ketua Jurusan/Prodi dengan melampirkan surat rekomendasi dan surat persetujuan butir (2) sampai dengan (4).
+Ketua Jurusan/Prodi meneruskan permohonan tersebut kepada Dekan untuk diproses. Dekan meneruskan surat permohonan tersebut kepada Ketua Jurusan/ Prodi yang akan dituju jika perpindahan dalam satu fakultas. Selanjutnya, Ketua Jurusaan/Prodi memberikan jawaban kepada dekan. Dekan mengirimkan surat kepada Dekan yang akan dituju jika perpindahan berbeda fakultas. Selanjutnya, Dekan yang dituju meneruskan permohonan tersebut kepada Rektor apabila dapat menerima permohonan pindah tersebut, atau mengembalikannya kepada Dekan asal apabila menolaknya.
+Subbagian Registrasi dan Statistik pada Bagian Akademik BAKK memproses dan mengirimkan jawaban yang telah ditetapkan oleh Rektor kepada pemohon dan tembusannya dikirimkan kepada pejabat yang terkait.
+Ketentuan Khusus.
+
+Pindah program studi hanya dapat dilakukan bagi sesama program studi nonkependidikan dan program studi kependidikan.
+Program studi tertentu yang diselenggarakan atas dasar kuota mahasiswa yang telah ditetapkan sebelumnya, atau program studi yang merupakan program prajabatan tertentu tidak diizinkan menerima mahasiswa pindah program.
+Mahasiswa yang telah diterima pada program studi pindahan tidak diperbolehkan kembali ke program studi asal.
+
+
+
+
+### Question:
+Bagaimana prosedur pindah prodi?
+Answer:
+Mahasiswa dapat mengajukan permohonan pindah program studi dengan ketentuan sebagai berikut.
+
+Waktu pindah program studi adalah pada awal semester III (setelah memperoleh nilai hasil studi semester II) atau semester V (setelah memperoleh nilai hasil studi semester IV). Masa studi yang sudah dijalani dihitung sebagai bagian dari masa studi secara keseluruhan.&nbsp;
+Mahasiswa dapat mengajukan pindah program studi dengan alasan:&nbsp;
+
+sakit atau cacat tertentu sehingga tidak mampu melaksanakan tugas perkuliahan pada program studi yang dijalani dan
+secara akademik tidak mampu mengikuti perkuliahan di prodi yang dijalani.
+
+
+Persyaratan akademik yang harus dipenuhi oleh mahasiswa yang akan pindah program studi adalah IPK maksimal 2,0 dengan nilai mata kuliah MKU minimal B dan syarat lain yang ditentukan oleh Jurusan yang dituju.
+Mahasiswa yang akan pindah program studi adalah mahasiswa berstatus aktif pada semester sebelumnya dan harus memenuhi persyaratan administratif berupa
+
+surat rekomendasi dari pembimbing akademik;
+surat rekomendasi pindah program studi dari Pusat Pengembangan Layanan Konseling, Bursa Kerja, MKU dan MKDK;
+surat rekomendasi dari dokter jika alasannya sakit;
+surat persetujuan dari Ketua Jurusan asal;
+surat pengantar dari Jurusan asal ke Jurusan yang dituju;
+surat persetujuan dari Ketua Jurusan yang akan dituju.&nbsp;
+
+
+Mahasiswa yang akan pindah program studi mengajukan permohonan secara tertulis kepada Ketua Jurusan/Prodi dengan melampirkan surat rekomendasi dan surat persetujuan butir (2) sampai dengan (4).
+Ketua Jurusan/Prodi meneruskan permohonan tersebut kepada Dekan untuk diproses. Dekan meneruskan surat permohonan tersebut kepada Ketua Jurusan/ Prodi yang akan dituju jika perpindahan dalam satu fakultas. Selanjutnya, Ketua Jurusaan/Prodi memberikan jawaban kepada dekan. Dekan mengirimkan surat kepada Dekan yang akan dituju jika perpindahan berbeda fakultas. Selanjutnya, Dekan yang dituju meneruskan permohonan tersebut kepada Rektor apabila dapat menerima permohonan pindah tersebut, atau mengembalikannya kepada Dekan asal apabila menolaknya.
+Subbagian Registrasi dan Statistik pada Bagian Akademik BAKK memproses dan mengirimkan jawaban yang telah ditetapkan oleh Rektor kepada pemohon dan tembusannya dikirimkan kepada pejabat yang terkait.
+Ketentuan Khusus.
+
+Pindah program studi hanya dapat dilakukan bagi sesama program studi nonkependidikan dan program studi kependidikan.
+Program studi tertentu yang diselenggarakan atas dasar kuota mahasiswa yang telah ditetapkan sebelumnya, atau program studi yang merupakan program prajabatan tertentu tidak diizinkan menerima mahasiswa pindah program.
+Mahasiswa yang telah diterima pada program studi pindahan tidak diperbolehkan kembali ke program studi asal.
+
+
+
+
+### Question:
+Apakah cuti kuliah itu?
+Answer:
+Cuti kuliah adalah penundaan registrasi administrasi dalam jangka waktu satu semester, yang diajukan secara online dan disetujui oleh supervisor prodi/ jurusan sehingga tidak diperhitungkan sebagai masa studi serta tidak dikenakan biaya UKT/BKT, hanya dikenakan biaya administrasi cuti sebesar Rp 50.000,00.
+Adapun syarat cuti sebagai berikut.&nbsp;Cuti kuliah yang direncanakan (mengajukan sesuai periode pengajuan cuti melalui myunnes-student) dan cuti kuliah tidak direncanakan karena alasan khusus (permohonan resmi kepada pimpinan UNNES).
+Ketentuan cuti kuliah adalah sebagai berikut.&nbsp;
+
+Mahasiswa dapat diberikan cuti kuliah apabila yang bersangkutan pada semester sebelumnya telah melakukan registrasi administratif dan akademik.
+Mahasiswa yang akan mengambil cuti kuliah pada suatu semester berkewajiban melakukan registrasi administratif sesuai dengan jadwal registrasi.
+Mahasiswa yang akan cuti kuliah harus mengisi formulir melalui sistem cuti online (myunnes-student).
+
+Masa cuti kuliah untuk jenjang program studi diatur sebagai berikut.
+
+Jika ajuan cuti terencana gagal pada myunnes-student, silakan cek kemungkinannya sebagai berikut.
+
+Mahasiswa fast track (Tidak Boleh Cuti)
+Sudah mengajukan cuti 2x berturut-turut, maka ajuan ketiga jika berturut-turut tidak bisa cuti,
+Sudah mengajukan cuti 3x tidak berturut-turut, maka ajuan cuti keempat tidak bisa cuti(sesuai pedoman akademik, cuti hanya boleh 2 kali berturut-turut atau 3 kali tidak berturur-turut)
+Ada tunggakan registrasi di semester sebelumnya
+Mahasiswa KIPK.
+
+
+### Question:
+Prosedur cuti kuliah
+Answer:
+Cuti kuliah adalah penundaan registrasi administrasi dalam jangka waktu satu semester, yang diajukan secara online dan disetujui oleh supervisor prodi/ jurusan sehingga tidak diperhitungkan sebagai masa studi serta tidak dikenakan biaya UKT/BKT, hanya dikenakan biaya administrasi cuti sebesar Rp 50.000,00.
+Adapun syarat cuti sebagai berikut.&nbsp;Cuti kuliah yang direncanakan (mengajukan sesuai periode pengajuan cuti melalui myunnes-student) dan cuti kuliah tidak direncanakan karena alasan khusus (permohonan resmi kepada pimpinan UNNES).
+Ketentuan cuti kuliah adalah sebagai berikut.&nbsp;
+
+Mahasiswa dapat diberikan cuti kuliah apabila yang bersangkutan pada semester sebelumnya telah melakukan registrasi administratif dan akademik.
+Mahasiswa yang akan mengambil cuti kuliah pada suatu semester berkewajiban melakukan registrasi administratif sesuai dengan jadwal registrasi.
+Mahasiswa yang akan cuti kuliah harus mengisi formulir melalui sistem cuti online (myunnes-student).
+
+Masa cuti kuliah untuk jenjang program studi diatur sebagai berikut.
+
+Jika ajuan cuti terencana gagal pada myunnes-student, silakan cek kemungkinannya sebagai berikut.
+
+Mahasiswa fast track (Tidak Boleh Cuti)
+Sudah mengajukan cuti 2x berturut-turut, maka ajuan ketiga jika berturut-turut tidak bisa cuti,
+Sudah mengajukan cuti 3x tidak berturut-turut, maka ajuan cuti keempat tidak bisa cuti(sesuai pedoman akademik, cuti hanya boleh 2 kali berturut-turut atau 3 kali tidak berturur-turut)
+Ada tunggakan registrasi di semester sebelumnya
+Mahasiswa KIPK.
+
+
+### Question:
+Bagaimana pengertian bantuan KIP Kuliah sementara karena cuti?
+Answer:
+Cuti karena sakit atau alasan lain sesuai peraturan perguruan tinggi diperbolehkan. Akan tetapi cuti tidak akan menambah durasi maksimal pemberian bantuan. Penerima KIP Kuliah dengan status cuti dapat ditetapkan dengan ketentuan biaya yang disalurkan hanya biaya penyelenggaraan pendidikan
+
+### Question:
+Masih perlukah legalisir ijazah/transkrip?
+Answer:
+Dokumen yang sudah tertandatangani secara elektronik (tte) baik ijazah, transkrip, dan SKPI tidak perlu dilakukan legalisasi lagi, cukup disampaikan ke stakeholder (pihak yang membutuhkan) agar dapat melakukan pengecekan pada laman seperti yang tertera di ijazah atau transkrip lulusan.
+Namun untuk dokumen yang belum tertandatangani secara elektronik ataupun stakeholder yang tetap menginginkan legalisasi secara manual, maka proses legalisasi ijazah dan transkrip akademik dapat dilakukan secara daring melalui sistem satulayanan.unnes.ac.id atau secara luring datang langsung ke fakultas.
+
+### Question:
+Bagaimana cara mendapatkan informasi tentang pendaftaran mahasiswa baru di UNNES?
+Answer:
+Untuk program Diploma (D3) dan Sarjana (S1) UNNES membuka penerimaan melalui jalur Seleksi Nasional Penerimaan Mahasiswa Baru (SNPMB) baik Seleksi Nasional Berdasarkan Prestasi (SNBP) ataupun Seleksi Nasional Berdasarkan Tes (SNBT). Selain&nbsp;seleksi secara nasional, UNNES juga membuka penerimaan mahasiswa baru melalui Seleksi Mandiri (SM-UNNEs).&nbsp;
+Untuk program Magister (S2) dan Doktor (S3) UNNES membuka penerimaan melalui jalur Seleksi Mandiri (SM-UNNES) yang meliputi SM Reguler, SM Rekognisi Pembelajaran Lampau (RPL), SM Research, dan SM Fast Track. UNNES juga menjalin kerjasama dengan beberapa instansi untuk meningkatkan kompetensi mereka. Bagi instansi yang menghendaki kerjasama untuk program Magister dan Doktor dapat berhubungan dengan Program Studi atau Direktorat Akademik, Kemahasiswaan, dan Konservasi di UNNES.Selain program berjenjang, UNNES juga menerima Program Profesi diantaranya Program Profesi Guru (PPG) dan Program Profesi Konselor.Di UNNES juga membuka program tidak berjenjang (non-degree) yang dikhususkan untuk mahasiswa Internasional yaitu program Short Course dan program Credit Transfer.
+Segala informasi mengenai cara pendaftaran, jalur seleksi yang dibuka, biaya kuliah, daftar program studi, akreditasi, daya tampung, dan lnformasi lainnya, silakan klik laman pendaftaran resmi kami unnes.ac.id/admission.
+
+### Question:
+Bagaimana cara mengurus KTM hilang/rusak?
+Answer:
+Mahasiswa dapat mengajukan pembuatan KTM ulang dengan syarat mahasiswa berstatus aktif belum lulus, memiliki email mahasiswa UNNES, memiliki surat keterangan kehilangan dari fakultas atau kepolisian, dan bukti pembayaran cetak ulang KTM sebesar Rp 50.000,00. Surat keterangan kehilangan dan bukti pembayaran diserahkan ke Kantor Admisi dan Layanan Terpadu (ALT) gedung rektorat lantai 1 untuk diproses. KTM dapat diambil tiap hari Kamis pada jam kerja. Adapun kode pembayaran KTM menggunakan nomor Virtuall Account (VA) BNI yang dapat diperoleh dari petugas ALT. Silakan pilih konsultasi dengan Customer Service ALT untuk mendapatkan VA Cetak KTM. KTM dapat diambil setelah 5x24 jam pengajuan pada hari efektif kerja.
+
+### Question:
+Cara cetak ulang KTM/ Kartu Tanda Mahasiswa
+Answer:
+Mahasiswa dapat mengajukan pembuatan KTM ulang dengan syarat mahasiswa berstatus aktif belum lulus, memiliki email mahasiswa UNNES, memiliki surat keterangan kehilangan dari fakultas atau kepolisian, dan bukti pembayaran cetak ulang KTM sebesar Rp 50.000,00. Surat keterangan kehilangan dan bukti pembayaran diserahkan ke Kantor Admisi dan Layanan Terpadu (ALT) gedung rektorat lantai 1 untuk diproses. KTM dapat diambil tiap hari Kamis pada jam kerja. Adapun kode pembayaran KTM menggunakan nomor Virtuall Account (VA) BNI yang dapat diperoleh dari petugas ALT. Silakan pilih konsultasi dengan Customer Service ALT untuk mendapatkan VA Cetak KTM. KTM dapat diambil setelah 5x24 jam pengajuan pada hari efektif kerja.
+
+### Question:
+Kapan KTM dan Jas Almamater bisa diambil?
+Answer:
+Jadwal pengambilan diumumkan melalui broadcast telegram mahasiswa. Jika belum mendapatkan dapat ditanyakan di masing-masing fakultas.
+
+### Question:
+Ijazah saya belum dikeluarkan, dokumen apa yang saya upload?
+Answer:
+Khusus calon mahasiswa baru jalur SNBP boleh melampirkan Surat Keterangan Kelas XII yang disertai foto siswa dan ditandatangani Kepala Sekolah serta disahkan dengan stempel sekolah. Jalur selain SNBP wajib menyertakan dokumen SKL atau ijazah untuk kelengkapan berkas Registrasi Daring. Pastikan di dokumen/surat keterangan tersebut tercantun Nama Lengkap sesuai ijazah terakhir, Tempat Lahir, Tanggal Lahir, dan NIK.Jika mendaftar program Magister atau Doktor, dapat mengunggah Ijazah pada jenjang sebelumnya lagi.
+
+### Question:
+Sekolah saya belum menerbitkan Surat Keterangan Lulus (SKL) maupun Ijazah, dokumen apa yang saya lampirkan?
+Answer:
+Khusus calon mahasiswa baru jalur SNBP boleh melampirkan Surat Keterangan Kelas XII yang disertai foto siswa dan ditandatangani Kepala Sekolah serta disahkan dengan stempel sekolah. Jalur selain SNBP wajib menyertakan dokumen SKL atau ijazah untuk kelengkapan berkas Registrasi Daring. Pastikan di dokumen/surat keterangan tersebut tercantun Nama Lengkap sesuai ijazah terakhir, Tempat Lahir, Tanggal Lahir, dan NIK.Jika mendaftar program Magister atau Doktor, dapat mengunggah Ijazah pada jenjang sebelumnya lagi.
+
+### Question:
+Sudahkah saya resmi dinyatakan sebagai mahasiswa UNNES?
+Answer:
+Calon mahasiswa dinyatakan sebagai mahasiswa UNNES jika sudah mendapatkan Form R4/ bukti registrasi yang berisikan NIM dan email mahasiswa (@students.unnes.ac.id).
+Form R4 ini dapat dicetak dari aplikasi Datapokok setelah calon mahasiswa melakukan registrasi online dan data sudah diverifikasi oleh tim verifikator.
+
+### Question:
+Kapan calon mahasiswa dinyatakan resmi menjadi mahasiswa UNNES?
+Answer:
+Calon mahasiswa dinyatakan sebagai mahasiswa UNNES jika sudah mendapatkan Form R4/ bukti registrasi yang berisikan NIM dan email mahasiswa (@students.unnes.ac.id).
+Form R4 ini dapat dicetak dari aplikasi Datapokok setelah calon mahasiswa melakukan registrasi online dan data sudah diverifikasi oleh tim verifikator.
+
+### Question:
+Mengapa saat registrasi online, data saya belum diverifikasi?
+Answer:
+Pastikan seluruh persyaratan sudah diisi sesuai dengan ketentuan. Cek secara berkala notifikasi pada akun datapokok. Proses verifikasi data dilakukan sesuai antrian pada jam kerja layanan sebagai berikut.Senin - Kamis pukul 08.00 -15.00 WIB (Istirahat pukul 12.00 - 13.00 WIB)Jumat pukul 08.00 - 14.30 WIB (Istirahat pukul 11.00 - 13.00 WIB)
+
+### Question:
+Tidak bisa unggah/upload foto saat registrasi online di datapokok
+Answer:
+Silakan unggah foto sesuai ketentuan (ukuran foto 3x4 maksimal 500kb, format jpg/jpeg, menampilkan 80% wajah (foto wajah lebih dekat/close up), background berwarna merah), mengisi ukuran jaket, dan nama email mahasiswa&gt; lalu klik simpan&gt; cek apakah foto sudah muncul di layar
+Jika sudah silakan lengkapi berkas lainnya (Ijazah terakhir, bukti bayar) dan klik simpan kembali.Setelah proses tersebut dilakukan, silakan download form R1-R3, melengkapi form tersebut, lalu diunggak kembali dan klik tombol simpan.
+
+### Question:
+Upload foto registrasi online selalu gagal
+Answer:
+Silakan unggah foto sesuai ketentuan (ukuran foto 3x4 maksimal 500kb, format jpg/jpeg, menampilkan 80% wajah (foto wajah lebih dekat/close up), background berwarna merah), mengisi ukuran jaket, dan nama email mahasiswa&gt; lalu klik simpan&gt; cek apakah foto sudah muncul di layar
+Jika sudah silakan lengkapi berkas lainnya (Ijazah terakhir, bukti bayar) dan klik simpan kembali.Setelah proses tersebut dilakukan, silakan download form R1-R3, melengkapi form tersebut, lalu diunggak kembali dan klik tombol simpan.
+
+### Question:
+Tidak dapat mencetak form R1 R2 R3
+Answer:
+Silakan unggah foto sesuai ketentuan (ukuran foto 3x4 maksimal 500kb, format jpg/jpeg, menampilkan 80% wajah (foto wajah lebih dekat/close up), background berwarna merah), mengisi ukuran jaket, dan nama email mahasiswa&gt; lalu klik simpan&gt; cek apakah foto sudah muncul di layar
+Jika sudah silakan lengkapi berkas lainnya (Ijazah terakhir, bukti bayar) dan klik simpan kembali.Setelah proses tersebut dilakukan, silakan download form R1-R3, melengkapi form tersebut, lalu diunggak kembali dan klik tombol simpan.
+
+### Question:
+Menurut saya UKT saya terlalu tinggi tidak sesuai dengan kemampuan, mengapa demikian?
+Answer:
+Besaran UKT yang dibebankan kepada mahasiswa diambil berdasarkan isian data pada aplikasi Datapokok. Dari isian tersebut dipertimbangkan dan diverifikasi oleh tim Verifikator UKT yang kemudian menghasilkan penetapan UKT anda.
+
+### Question:
+Alamat rumah diisi sesuai KTP atau domisili?
+Answer:
+Isian alamat rumah sesuai domisili, dokumen pendukung lain yang dilampirkan adalah rumah sesuai domisili
+
+### Question:
+Kenapa saya belum bisa login datapokok?
+Answer:
+Apabila saudara adalah calon mahasiswa baru SNBP yang akan melalukan pengisian datapokok, silahkan ditunggu dan cek secara berkala. Silahkan ditunggu sampai besok, apabila sampai keesokan harinya saudara masih tidak dapat melakukan login silahkan dapat menghubungi kami melalui Customer Service Helpdesk
+
+### Question:
+Kapan jadwal pendaftaran seleksi mandiri reguler UNNES ?
+Answer:
+Untuk seleksi mandiri reguler UNNES terdapat dua gelombang, pendaftaran gelombang pertama mulai tanggal 14 April - 5 Juli 2024 dan kemudian untuk gelombang kedua mulai tanggal 1 - 19 Juli 2024
+
+### Question:
+Apa saja jalur seleksi mandiri yang terdapat di UNNES?
+Answer:
+Untuk saat ini terdapat lima jalur seleksi mandiri yang ada di UNNES, jalur seleksi mandiri reguler, jalur seleksi mandiri UTBK SNBT, jalur seleksi mandiri Prestasi, jalur mandiri kelas internasional, jalur seleksi mandiri UTBK SNBT - Kelas Internasional
+

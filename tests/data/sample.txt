@@ -1,0 +1,125 @@
+Python Programming Basics
+
+This document covers fundamental concepts in Python programming.
+
+Variables and Data Types
+
+Python supports several built-in data types:
+- Integers: whole numbers like 42
+- Floats: decimal numbers like 3.14
+- Strings: text enclosed in quotes like "hello"
+- Booleans: True or False values
+- Lists: ordered collections like [1, 2, 3]
+- Dictionaries: key-value pairs like {"name": "Alice", "age": 30}
+
+Control Flow
+
+If Statements
+Use if statements to make decisions in your code:
+if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+Loops
+For loops iterate over sequences:
+for item in items:
+    process(item)
+
+While loops continue until a condition is false:
+while condition:
+    do_something()
+
+Functions
+
+Functions are reusable blocks of code:
+def greet(name):
+    return f"Hello, {name}!"
+
+You can have default parameters:
+def power(base, exponent=2):
+    return base ** exponent
+
+Classes and Objects
+
+Python supports object-oriented programming:
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    
+    def bark(self):
+        return f"{self.name} says woof!"
+
+my_dog = Dog("Buddy")
+print(my_dog.bark())
+
+Exception Handling
+
+Handle errors gracefully:
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("Cleanup code here")
+
+List Comprehensions
+
+Create lists concisely:
+squares = [x**2 for x in range(10)]
+evens = [x for x in range(20) if x % 2 == 0]
+
+File Operations
+
+Reading files:
+with open("file.txt", "r") as f:
+    content = f.read()
+
+Writing files:
+with open("output.txt", "w") as f:
+    f.write("Hello, World!")
+
+Modules and Packages
+
+Import functionality from other files:
+import math
+from datetime import datetime
+import numpy as np
+
+Best Practices
+
+1. Use meaningful variable names
+2. Write docstrings for functions
+3. Follow PEP 8 style guide
+4. Handle exceptions appropriately
+5. Write tests for your code
+6. Use virtual environments
+7. Keep functions small and focused
+
+Common Patterns
+
+Singleton Pattern
+Ensures only one instance exists
+
+Factory Pattern
+Creates objects without specifying exact class
+
+Decorator Pattern
+Adds functionality to existing code
+
+Context Managers
+Manages resources automatically with "with" statement
+
+Debugging Tips
+
+- Use print statements to track execution
+- Leverage the debugger (pdb)
+- Check variable types with type()
+- Use assertions to verify assumptions
+- Read error messages carefully
+
+Conclusion
+
+Python is a versatile, readable programming language. Practice these fundamentals to build a strong foundation.
