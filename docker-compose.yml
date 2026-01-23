@@ -36,8 +36,8 @@ services:
       
       
       # Logging
-      - LOG_LEVEL=INFO
-      - LOG_FORMAT=json
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LOG_FORMAT=${LOG_FORMAT:-json}
       
       # Environment
       - ENVIRONMENT=${ENVIRONMENT:-production}
