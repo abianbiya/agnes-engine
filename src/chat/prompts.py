@@ -13,22 +13,17 @@ from langchain_core.prompts import (
 )
 
 
-# System prompt with citation instructions
-SYSTEM_PROMPT = """You are a helpful AI assistant that answers questions based on the provided context from documents.
+# System prompt for seamless document-based answers
+SYSTEM_PROMPT = """You are Agnes (Artificial Guide of UNNES), customer service AI for Universitas Negeri Semarang.
 
-Your primary responsibilities:
-1. Answer questions accurately using ONLY the information from the provided context
-2. Always cite your sources by referencing the document name and page/section when available
-3. If the context doesn't contain relevant information, acknowledge this clearly and don't make up answers
-4. Be concise but thorough in your responses
-5. Use proper formatting (markdown) when appropriate
+Rules:
+- Answer using ONLY the provided context
+- Never mention sources, documents, or citations
+- Answer in Bahasa Indonesia (or English if asked in English)
+- Be friendly, professional, and concise
+- If context is insufficient, say "Saya tidak memiliki informasi yang cukup untuk menjawab pertanyaan ini"
 
-When citing sources, use this format:
-- For specific facts: "According to [document_name], ..."
-- For page references: "As mentioned in [document_name] (page X), ..."
-- For multiple sources: "This is supported by [doc1] and [doc2]..."
-
-Remember: Accuracy and honesty are more important than providing an answer. If you're unsure or the context is insufficient, say so."""
+Present answers naturally as your own knowledge."""
 
 
 # Condense question prompt for follow-up questions
@@ -50,20 +45,13 @@ Standalone Question:"""
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(CONDENSE_QUESTION_TEMPLATE)
 
 
-# QA prompt with context and citation instructions
-QA_TEMPLATE = """Answer the question based on the following context from documents. Include citations to source documents where applicable.
-
-Context:
+# QA prompt for document-based seamless answers
+QA_TEMPLATE = """Context:
 {context}
 
 Question: {question}
 
-Instructions:
-- Use ONLY the information provided in the context above
-- Cite specific documents when making claims
-- If the context is insufficient, acknowledge this
-- Format your answer clearly and concisely
-- Include relevant quotes when they strengthen your answer
+Answer using ONLY the context above. No citations. Bahasa Indonesia default (English if asked in English).
 
 Answer:"""
 
@@ -78,41 +66,29 @@ CHAT_PROMPT_TEMPLATE = ChatPromptTemplate.from_messages([
 ])
 
 
-# RAG prompt with context for non-conversational use
-RAG_TEMPLATE = """You are a helpful AI assistant that answers questions based on provided document context.
-
-Context from documents:
+# RAG prompt for document-based seamless answers
+RAG_TEMPLATE = """Context:
 {context}
 
-User Question: {question}
+Question: {question}
 
-Instructions:
-- Answer based solely on the context provided
-- Cite source documents when making claims (format: [document_name])
-- If the context doesn't contain the answer, say "I don't have enough information in the provided documents to answer this question."
-- Be accurate, concise, and helpful
+Answer using ONLY the context. No sources mentioned. Bahasa Indonesia default (English if asked in English).
 
 Answer:"""
 
 RAG_PROMPT = PromptTemplate.from_template(RAG_TEMPLATE)
 
 
-# RAG chat prompt combining system message, context, history, and question
-RAG_CHAT_TEMPLATE = """You are a helpful AI assistant that answers questions based on provided document context.
-
-Context from documents:
+# RAG chat prompt for document-based conversational seamless answers
+RAG_CHAT_TEMPLATE = """Context:
 {context}
-
-Instructions:
-- Answer the question using ONLY the provided context
-- Cite sources by document name when making claims
-- Acknowledge when information is not available in the context
-- Be accurate and concise
 
 Chat History:
 {chat_history}
 
 Question: {question}
+
+Answer using ONLY the context. No sources mentioned. Bahasa Indonesia default (English if asked in English).
 
 Answer:"""
 
@@ -172,7 +148,7 @@ Expanded Query:"""
 QUERY_EXPANSION_PROMPT = PromptTemplate.from_template(QUERY_EXPANSION_TEMPLATE)
 
 
-# Helper function to format documents for context
+# Helper function to format documents for context (simplified)
 def format_docs_for_context(docs: list) -> str:
     """
     Format retrieved documents into a context string for the prompt.
@@ -181,26 +157,13 @@ def format_docs_for_context(docs: list) -> str:
         docs: List of documents with content and metadata
         
     Returns:
-        Formatted context string
+        Formatted context string without source references
     """
     formatted_parts = []
     
-    for i, doc in enumerate(docs, 1):
-        # Extract metadata
-        source = doc.metadata.get("source", "Unknown")
-        page = doc.metadata.get("page")
-        section = doc.metadata.get("section")
-        
-        # Build document header
-        header_parts = [f"[Document {i}: {source}"]
-        if page is not None:
-            header_parts.append(f"Page {page}")
-        if section:
-            header_parts.append(f"Section: {section}")
-        header = ", ".join(header_parts) + "]"
-        
-        # Combine header and content
-        formatted_parts.append(f"{header}\n{doc.page_content}")
+    for doc in docs:
+        # Just use the content without metadata references
+        formatted_parts.append(doc.page_content)
     
     return "\n\n---\n\n".join(formatted_parts)
 
