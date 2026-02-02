@@ -165,6 +165,14 @@ def format_docs_for_context(docs: list) -> str:
     formatted_parts = []
     
     for doc in docs:
+        # DEBUG: Check if document content already has citations
+        if "Document" in doc.page_content or "Sumber" in doc.page_content:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.warning(
+                f"Document content already contains citation markers: {doc.page_content[:200]}"
+            )
+        
         # Just use the content without metadata references
         formatted_parts.append(doc.page_content)
     

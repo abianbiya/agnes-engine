@@ -218,12 +218,23 @@ class RAGChatChain(LoggerMixin):
                 "chat_history": lambda x: format_chat_history(x.get("chat_history", [])),
                 "question": lambda x: x["standalone_question"],
             })
+            | RunnableLambda(func=self._debug_prompt_input)  # DEBUG: Log prompt before LLM
             | RAG_CHAT_PROMPT
             | self.llm
             | StrOutputParser()
         )
         
         return rag_chain
+    
+    def _debug_prompt_input(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
+        """Debug function to log the prompt inputs before sending to LLM."""
+        self.logger.info(
+            "prompt_input_debug",
+            context_preview=inputs.get("context", "")[:300],
+            question=inputs.get("question", "")[:200],
+            history_length=len(inputs.get("chat_history", "")),
+        )
+        return inputs
     
     def _simple_expand_query(self, query: str) -> str:
         """
@@ -304,7 +315,17 @@ class RAGChatChain(LoggerMixin):
         # Store docs for later source extraction
         self._last_retrieved_docs = docs
         
-        return format_docs_for_context(lc_docs)
+        # Format context and log it for debugging
+        formatted_context = format_docs_for_context(lc_docs)
+        
+        # DEBUG: Log the formatted context to see if citations are already there
+        self.logger.info(
+            "formatted_context_debug",
+            context_preview=formatted_context[:500],
+            context_length=len(formatted_context),
+        )
+        
+        return formatted_context
     
     async def chat(
         self,
@@ -343,7 +364,22 @@ class RAGChatChain(LoggerMixin):
         
         # Invoke chain
         try:
+            # DEBUG: Log the full prompt being sent to LLM
+            self.logger.info(
+                "llm_input_debug",
+                question=question[:200],
+                has_history=len(chat_history) > 0,
+            )
+            
             answer = await self.chain.ainvoke(chain_input)
+            
+            # DEBUG: Log the raw LLM output
+            self.logger.info(
+                "llm_output_debug",
+                answer_preview=answer[:500],
+                answer_length=len(answer),
+                contains_document_ref="Document" in answer or "Sumber" in answer,
+            )
             
             # Extract sources from retrieved documents
             sources = [
