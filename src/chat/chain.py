@@ -26,9 +26,28 @@ from src.chat.prompts import (
     RAG_CHAT_PROMPT,
     format_chat_history,
     format_docs_for_context,
+    strip_source_mentions,
 )
 from src.retrieval.retriever import RAGRetriever, RetrievedDocument
 from src.utils.logging import LoggerMixin
+
+# Number of trailing messages kept in the prompt. window_size is 10 pairs;
+# feeding all 20 messages every turn is pure prefill cost for no accuracy gain.
+HISTORY_TURNS = 6
+
+# A question only needs the extra condensing LLM call when it leans on the
+# previous turn. Everything else goes straight to retrieval and saves a full
+# round trip (~1-3s on gemma3:12b).
+_ANAPHORA = re.compile(
+    r"\b(itu|tersebut|tadi|ini|sebelumnya|mereka|dia|beliau|terus|lalu|kemudian|"
+    r"keduanya|tersebut\?|it|that|those|these|they|them|he|she|previous|above)\b",
+    re.IGNORECASE,
+)
+
+
+def _needs_condense(question: str) -> bool:
+    """True when the question is too short or references the conversation."""
+    return len(question.split()) < 6 or bool(_ANAPHORA.search(question))
 
 
 @dataclass
@@ -183,7 +202,9 @@ class RAGChatChain(LoggerMixin):
         # Chain to condense follow-up questions
         condense_chain = (
             {
-                "chat_history": lambda x: format_chat_history(x["chat_history"]),
+                "chat_history": lambda x: format_chat_history(
+                    x["chat_history"][-HISTORY_TURNS:]
+                ),
                 "question": lambda x: x["question"],
             }
             | CONDENSE_QUESTION_PROMPT
@@ -197,8 +218,9 @@ class RAGChatChain(LoggerMixin):
             chat_history = inputs.get("chat_history", [])
             question = inputs["question"]
             
-            # If no history, use original question (skips a whole LLM round trip)
-            if not chat_history:
+            # Skip the round trip when there is nothing to resolve against, or
+            # when the question already stands on its own.
+            if not chat_history or not _needs_condense(question):
                 return question
             
             # Otherwise, condense the question
@@ -217,26 +239,17 @@ class RAGChatChain(LoggerMixin):
             )
             | RunnableParallel({
                 "context": RunnableLambda(func=lambda x: "", afunc=retrieve_context),
-                "chat_history": lambda x: format_chat_history(x.get("chat_history", [])),
+                "chat_history": lambda x: format_chat_history(
+                    x.get("chat_history", [])[-HISTORY_TURNS:]
+                ),
                 "question": lambda x: x["standalone_question"],
             })
-            | RunnableLambda(func=self._debug_prompt_input)  # DEBUG: Log prompt before LLM
             | RAG_CHAT_PROMPT
             | self.llm
             | StrOutputParser()
         )
         
         return rag_chain
-    
-    def _debug_prompt_input(self, inputs: Dict[str, Any]) -> Dict[str, Any]:
-        """Debug function to log the prompt inputs before sending to LLM."""
-        self.logger.info(
-            "prompt_input_debug",
-            context_preview=inputs.get("context", "")[:300],
-            question=inputs.get("question", "")[:200],
-            history_length=len(inputs.get("chat_history", "")),
-        )
-        return inputs
     
     def _simple_expand_query(self, query: str) -> str:
         """
@@ -298,11 +311,7 @@ class RAGChatChain(LoggerMixin):
         # due to diluting semantic similarity
         search_query = query
         
-        self.logger.info(
-            "query_search",
-            original=query,
-            search_query=search_query[:200],
-        )
+        self.logger.debug("query_search", search_query=search_query[:200])
         
         # Retrieve documents using the query
         docs = await self.retriever.retrieve(search_query)
@@ -317,14 +326,10 @@ class RAGChatChain(LoggerMixin):
         # Store docs for later source extraction
         self._last_retrieved_docs = docs
         
-        # Format context and log it for debugging
         formatted_context = format_docs_for_context(lc_docs)
         
-        # DEBUG: Log the formatted context to see if citations are already there
-        self.logger.info(
-            "formatted_context_debug",
-            context_preview=formatted_context[:500],
-            context_length=len(formatted_context),
+        self.logger.debug(
+            "formatted_context", context_length=len(formatted_context)
         )
         
         return formatted_context
@@ -366,22 +371,7 @@ class RAGChatChain(LoggerMixin):
         
         # Invoke chain
         try:
-            # DEBUG: Log the full prompt being sent to LLM
-            self.logger.info(
-                "llm_input_debug",
-                question=question[:200],
-                has_history=len(chat_history) > 0,
-            )
-            
-            answer = await self.chain.ainvoke(chain_input)
-            
-            # DEBUG: Log the raw LLM output
-            self.logger.info(
-                "llm_output_debug",
-                answer_preview=answer[:500],
-                answer_length=len(answer),
-                contains_document_ref="Document" in answer or "Sumber" in answer,
-            )
+            answer = strip_source_mentions(await self.chain.ainvoke(chain_input))
             
             # Extract sources from retrieved documents
             sources = [
@@ -450,13 +440,28 @@ class RAGChatChain(LoggerMixin):
             "chat_history": chat_history,
         }
         
-        # Stream response
+        # Stream response.
+        # ponytail: buffered per line, not per token, because a citation marker
+        # can only be recognised once the line around it is complete.
         full_response = ""
+        buffer = ""
         
         try:
             async for chunk in self.chain.astream(chain_input):
-                full_response += chunk
-                yield chunk
+                buffer += chunk
+                while "\n" in buffer:
+                    line, buffer = buffer.split("\n", 1)
+                    cleaned = strip_source_mentions(line)
+                    if cleaned:
+                        full_response += cleaned + "\n"
+                        yield cleaned + "\n"
+            
+            tail = strip_source_mentions(buffer)
+            if tail:
+                full_response += tail
+                yield tail
+            
+            full_response = full_response.strip()
             
             # After streaming completes, add to memory
             self.memory.add_exchange(session_id, question, full_response)
@@ -582,7 +587,9 @@ class SimpleRAGChain(LoggerMixin):
         )
         
         try:
-            answer = await self.chain.ainvoke({"question": question})
+            answer = strip_source_mentions(
+                await self.chain.ainvoke({"question": question})
+            )
             
             sources = [
                 SourceDocument.from_retrieved_doc(doc)

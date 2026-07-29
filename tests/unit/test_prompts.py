@@ -29,8 +29,10 @@ class TestPromptTemplates:
         """System prompt should be defined."""
         assert isinstance(SYSTEM_PROMPT, str)
         assert len(SYSTEM_PROMPT) > 0
-        assert "context" in SYSTEM_PROMPT.lower()
-        assert "cite" in SYSTEM_PROMPT.lower() or "source" in SYSTEM_PROMPT.lower()
+        assert "reference information" in SYSTEM_PROMPT.lower()
+        # The prompt must not demonstrate the citation shapes we want suppressed.
+        assert "[document" not in SYSTEM_PROMPT.lower()
+        assert "sumber:" not in SYSTEM_PROMPT.lower()
     
     def test_condense_question_prompt_is_prompt_template(self):
         """Condense question prompt should be a PromptTemplate."""
