@@ -86,6 +86,7 @@ class TestLLMFactory:
                 model="mistral",
                 temperature=0.8,
                 keep_alive=-1,
+                num_predict=None,
             )
             assert llm == mock_ollama_instance
 
@@ -195,6 +196,7 @@ class TestLLMFactoryUnit:
                 model="codellama",
                 temperature=0.1,
                 keep_alive=-1,
+                num_predict=None,
                 custom_param="value",
             )
             assert result == mock_ollama_instance

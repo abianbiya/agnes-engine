@@ -57,6 +57,7 @@ class LLMFactory(LoggerMixin):
                 model=settings.ollama_model,
                 temperature=settings.llm_temperature,
                 keep_alive=settings.ollama_keep_alive,
+                num_predict=settings.llm_max_tokens,
             )
         else:
             raise ValueError(
@@ -113,6 +114,7 @@ class LLMFactory(LoggerMixin):
         model: str = "llama2",
         temperature: float = 0.7,
         keep_alive: int | str = -1,
+        num_predict: int | None = None,
         **kwargs: Any,
     ) -> BaseChatModel:
         """
@@ -153,6 +155,9 @@ class LLMFactory(LoggerMixin):
             model=model,
             temperature=temperature,
             keep_alive=keep_alive,
+            # llm_max_tokens was previously honoured for OpenAI only, so a
+            # rambling Ollama answer had no ceiling. 649-token runaways cost 13s.
+            num_predict=num_predict,
             **kwargs,
         )
 
