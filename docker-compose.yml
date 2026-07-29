@@ -22,51 +22,20 @@ services:
     image: rag-chatbot-api:latest
     ports:
       - "${API_HOST_PORT:-8080}:8080"
+    # ponytail: env_file instead of a hand-kept whitelist. The old list silently
+    # dropped LLM_MAX_TOKENS, OLLAMA_KEEP_ALIVE, USE_RERANKER, CHUNK_* etc.
+    env_file:
+      - .env
     environment:
-      # ChromaDB connection
+      # Container-specific overrides only (these must differ from .env)
       - CHROMA_HOST=chromadb
       - CHROMA_PORT=8000
       - CHROMA_IN_MEMORY=false
-      
-      # API configuration
       - API_HOST=0.0.0.0
       - API_PORT=8080
-      - CORS_ENABLED=true
-      - CORS_ORIGINS=http://localhost:3000,http://localhost:8080
-      
-      
-      # Logging
-      - LOG_LEVEL=${LOG_LEVEL:-INFO}
-      - LOG_FORMAT=${LOG_FORMAT:-json}
-      
-      # Environment
-      - ENVIRONMENT=${ENVIRONMENT:-production}
-      # Redis (optional)
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - REDIS_ENABLED=false
-      
-      # OpenAI API Key (only needed if using OpenAI provider)
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-      
-      # LLM Configuration
-      - LLM_PROVIDER=${LLM_PROVIDER:-ollama}
-      - LLM_MODEL=${LLM_MODEL:-llama3.2}
-      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0.7}
-      
-      # Ollama Configuration
-      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
-      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2}
-      
-      # Embedding Configuration
-      # Using bge-m3 for better multilingual (Indonesian) support
-      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-ollama}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-bge-m3}
-      
-      # Retrieval Configuration
-      - RETRIEVAL_K=${RETRIEVAL_K:-4}
-      - USE_MMR=${USE_MMR:-true}
-      - MMR_DIVERSITY=${MMR_DIVERSITY:-0.5}
+      - ENVIRONMENT=${ENVIRONMENT:-production}
     volumes:
       # Mount documents directory for ingestion
       - ./documents:/app/documents:rw
@@ -121,36 +90,15 @@ services:
     image: rag-chatbot-mcp:latest
     ports:
       - "${MCP_HOST_PORT:-3000}:3000"
+    env_file:
+      - .env
     environment:
-      # MCP Configuration
+      # Container-specific overrides only
       - MCP_TRANSPORT=${MCP_TRANSPORT:-sse}
       - MCP_SERVER_PORT=3000
-      - MCP_SERVER_NAME=rag-chatbot
-      
-      # ChromaDB connection
       - CHROMA_HOST=chromadb
       - CHROMA_PORT=8000
       - CHROMA_IN_MEMORY=false
-      
-      # OpenAI API Key (only needed if using OpenAI provider)
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
-      
-      # LLM Configuration
-      - LLM_PROVIDER=${LLM_PROVIDER:-ollama}
-      - LLM_MODEL=${LLM_MODEL:-llama3.2}
-      
-      # Ollama Configuration
-      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
-      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2}
-      
-      # Embedding Configuration
-      # Using bge-m3 for better multilingual (Indonesian) support
-      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-ollama}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-bge-m3}
-      
-      # Logging
-      - LOG_LEVEL=${LOG_LEVEL:-INFO}
-      - LOG_FORMAT=${LOG_FORMAT:-json}
     volumes:
       # Mount data directory
       - mcp-data:/app/data:rw
