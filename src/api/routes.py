@@ -101,6 +101,7 @@ async def chat(
     """
     from src.chat.chain import RAGChatChain
     from src.core.llm import get_llm
+    from src.api.dependencies import get_chat_chain_for_method
     
     correlation_id = get_correlation_id()
     
@@ -113,20 +114,9 @@ async def chat(
     )
     
     try:
-        # Create retriever based on requested method
-        retriever = create_retriever_for_method(
-            method=request.retrieval_method,
-            settings=settings,
-            vectorstore=vectorstore,
-        )
-        
-        # Create chat chain with the selected retriever
-        llm = get_llm(settings)
-        chat_chain = RAGChatChain(
-            llm=llm,
-            retriever=retriever,
-            memory=memory,
-            use_mmr=settings.retrieval.use_mmr,
+        # Cached per (method, k, mmr) - avoids rebuilding the BM25 index per request
+        chat_chain = get_chat_chain_for_method(
+            request.retrieval_method, settings, vectorstore
         )
         
         # Process chat request
@@ -480,6 +470,10 @@ async def ingest_document(
             correlation_id=correlation_id,
         )
         
+        # New chunks landed: drop cached retrievers so BM25 reindexes
+        from src.api.dependencies import invalidate_retriever_caches
+        invalidate_retriever_caches()
+        
         return response
         
     except FileNotFoundError as e:
@@ -776,6 +770,9 @@ async def clear_collection(
         
         # Delete collection
         await vectorstore.delete_collection()
+        
+        from src.api.dependencies import invalidate_retriever_caches
+        invalidate_retriever_caches()
         
         handler.logger.info(
             "collection_cleared",

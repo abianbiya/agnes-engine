@@ -5,6 +5,7 @@ This module creates and configures the FastAPI application with
 routes, middleware, and event handlers.
 """
 
+import asyncio
 from contextlib import asynccontextmanager
 from typing import AsyncIterator
 
@@ -21,6 +22,18 @@ from src.utils.exceptions import RAGException, get_http_status_code
 from src.utils.logging import get_correlation_id, get_logger, setup_logging
 
 logger = get_logger(__name__)
+
+
+async def _warmup() -> None:
+    """Preload the chat model and BM25 index. Best effort, never fatal."""
+    try:
+        from src.api.dependencies import get_llm_cached, get_retriever_for_warmup
+
+        await get_llm_cached().ainvoke("ok")
+        await get_retriever_for_warmup()._ensure_bm25_loaded()
+        logger.info("warmup_completed")
+    except Exception as e:  # pragma: no cover - warmup must never block startup
+        logger.warning("warmup_failed", error=str(e))
 
 
 @asynccontextmanager
@@ -51,6 +64,10 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         version=app.version,
         environment=settings.environment,
     )
+    
+    # Warm the LLM + BM25 index in the background so the first real request
+    # does not pay the model cold-load (~24s for a 70B) or the corpus scan.
+    asyncio.create_task(_warmup())
     
     yield
     

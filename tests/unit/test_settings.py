@@ -35,12 +35,15 @@ class TestLLMSettings:
     """Tests for LLM configuration settings."""
 
     def test_default_values(self) -> None:
-        """Test default LLM settings."""
-        settings = LLMSettings()
+        """Test default LLM settings (with .env ignored)."""
+        settings = LLMSettings(_env_file=None)
         assert settings.llm_model == "gpt-4"
         assert settings.llm_provider == "openai"
         assert settings.llm_temperature == 0.7
         assert settings.llm_max_tokens == 2048
+        # keep_alive must default to "pin the model" or every idle request
+        # pays the Ollama cold-load (~24s for a 70B).
+        assert settings.ollama_keep_alive == -1
 
     def test_temperature_validation_valid(self) -> None:
         """Test valid temperature values."""

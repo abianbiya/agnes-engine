@@ -117,6 +117,7 @@ class TestEmbeddingsFactory:
             mock_ollama_class.assert_called_once_with(
                 model="mistral",
                 base_url="http://custom:8000",
+                keep_alive=-1,
             )
             assert embeddings == mock_ollama_instance
 
@@ -247,6 +248,7 @@ class TestEmbeddingsFactoryUnit:
             mock_ollama_class.assert_called_once_with(
                 model="llama2",
                 base_url="http://test:9000",
+                keep_alive=-1,
                 custom_param="value",
             )
             assert result == mock_ollama_instance

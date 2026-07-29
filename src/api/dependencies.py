@@ -42,25 +42,33 @@ def get_vectorstore(
     settings: Annotated[Settings, Depends(get_settings)]
 ) -> VectorStoreManager:
     """
-    Get vector store manager instance.
-    
+    Get vector store manager instance (cached singleton).
+
     Args:
         settings: Application settings
-        
+
     Returns:
         Initialized VectorStoreManager
     """
+    return _build_vectorstore()
+
+
+@lru_cache()
+def _build_vectorstore() -> VectorStoreManager:
+    # ponytail: cached because each instance opens a fresh Chroma HTTP client
+    # (heartbeat + get_or_create_collection + count) on first use.
+    settings = get_settings()
     embeddings = get_embeddings(settings)
     vectorstore = VectorStoreManager(
         settings=settings.chroma,
         embeddings=embeddings,
     )
-    
+
     logger.info(
         "vectorstore_dependency_created",
         collection=settings.chroma.collection,
     )
-    
+
     return vectorstore
 
 
@@ -88,38 +96,32 @@ def get_conversation_memory() -> ConversationMemory:
     return memory
 
 
+@lru_cache()
+def get_llm_cached() -> object:
+    """Get the chat model (cached singleton, keeps its HTTP connection pool)."""
+    return get_llm(get_settings())
+
+
 def get_retriever(
     settings: Annotated[Settings, Depends(get_settings)],
     vectorstore: Annotated[VectorStoreManager, Depends(get_vectorstore)],
 ) -> HybridRAGRetriever:
     """
-    Get hybrid RAG retriever instance (default).
-    
+    Get hybrid RAG retriever instance (cached singleton, default).
+
     Uses hybrid search combining BM25 keyword matching with semantic search
     for better retrieval of documents with specific terms.
-    
+
     Args:
         settings: Application settings
         vectorstore: Vector store manager
-        
+
     Returns:
         Initialized HybridRAGRetriever
     """
-    retriever = HybridRAGRetriever(
-        vectorstore=vectorstore,
-        k=settings.retrieval.retrieval_k,
-        semantic_weight=0.5,  # Balance between semantic and keyword
-        bm25_weight=0.5,
+    return create_retriever_for_method(
+        RetrievalMethod.HYBRID, settings, vectorstore
     )
-    
-    logger.info(
-        "hybrid_retriever_dependency_created",
-        k=settings.retrieval.retrieval_k,
-        semantic_weight=0.5,
-        bm25_weight=0.5,
-    )
-    
-    return retriever
 
 
 def get_semantic_retriever(
@@ -160,20 +162,31 @@ def create_retriever_for_method(
     k: int | None = None,
 ) -> Union[RAGRetriever, HybridRAGRetriever]:
     """
-    Factory function to create retriever based on method.
-    
+    Factory function to create retriever based on method (cached per method+k).
+
+    Caching matters: a fresh HybridRAGRetriever re-reads the entire Chroma
+    collection and rebuilds the BM25 index on its first query.
+
     Args:
         method: Retrieval method to use
         settings: Application settings
         vectorstore: Vector store manager
         k: Number of documents to retrieve (overrides settings if provided)
-        
+
     Returns:
         Appropriate retriever instance
     """
-    # Use provided k or fall back to settings
     num_docs = k if k is not None else settings.retrieval.retrieval_k
-    
+    return _build_retriever(method, num_docs, settings.retrieval.use_mmr, vectorstore)
+
+
+@lru_cache(maxsize=16)
+def _build_retriever(
+    method: RetrievalMethod,
+    num_docs: int,
+    use_mmr: bool,
+    vectorstore: VectorStoreManager,
+) -> Union[RAGRetriever, HybridRAGRetriever]:
     if method == RetrievalMethod.SEMANTIC:
         # Pure semantic search - disable MMR for best relevance matching
         retriever = RAGRetriever(
@@ -212,8 +225,22 @@ def create_retriever_for_method(
             method="hybrid",
             k=num_docs,
         )
-    
+
     return retriever
+
+
+def invalidate_retriever_caches() -> None:
+    """Drop cached retrievers so BM25 reindexes after ingestion/deletion."""
+    _build_retriever.cache_clear()
+    _build_chat_chain.cache_clear()
+    logger.info("retriever_caches_invalidated")
+
+
+def get_retriever_for_warmup() -> HybridRAGRetriever:
+    """Default retriever, for startup warmup."""
+    return create_retriever_for_method(
+        RetrievalMethod.HYBRID, get_settings(), _build_vectorstore()
+    )
 
 
 def get_chat_chain(
@@ -222,31 +249,52 @@ def get_chat_chain(
     memory: Annotated[ConversationMemory, Depends(get_conversation_memory)],
 ) -> RAGChatChain:
     """
-    Get RAG chat chain instance.
-    
+    Get RAG chat chain instance (cached singleton).
+
     Args:
         settings: Application settings
         retriever: RAG retriever
         memory: Conversation memory
-        
+
     Returns:
         Initialized RAGChatChain
     """
-    llm = get_llm(settings)
-    
+    return _build_chat_chain(retriever, memory, settings.retrieval.use_mmr)
+
+
+def get_chat_chain_for_method(
+    method: RetrievalMethod,
+    settings: Settings,
+    vectorstore: VectorStoreManager | None = None,
+) -> RAGChatChain:
+    """Get a cached chat chain for the given retrieval method."""
+    retriever = create_retriever_for_method(
+        method, settings, vectorstore or _build_vectorstore()
+    )
+    return _build_chat_chain(
+        retriever, get_conversation_memory(), settings.retrieval.use_mmr
+    )
+
+
+@lru_cache(maxsize=16)
+def _build_chat_chain(
+    retriever: Union[RAGRetriever, HybridRAGRetriever],
+    memory: ConversationMemory,
+    use_mmr: bool,
+) -> RAGChatChain:
     chat_chain = RAGChatChain(
-        llm=llm,
+        llm=get_llm_cached(),
         retriever=retriever,
         memory=memory,
-        use_mmr=settings.retrieval.use_mmr,
+        use_mmr=use_mmr,
     )
-    
+
     logger.info(
         "chat_chain_dependency_created",
-        llm_provider=settings.llm.llm_provider,
-        use_mmr=settings.retrieval.use_mmr,
+        llm_provider=get_settings().llm.llm_provider,
+        use_mmr=use_mmr,
     )
-    
+
     return chat_chain
 
 
@@ -298,11 +346,15 @@ __all__ = [
     "get_settings",
     "get_vectorstore",
     "get_conversation_memory",
+    "get_llm_cached",
     "get_retriever",
     "get_semantic_retriever",
     "get_chat_chain",
+    "get_chat_chain_for_method",
     "get_ingestion_pipeline",
     "create_retriever_for_method",
+    "invalidate_retriever_caches",
+    "get_retriever_for_warmup",
     "ChatChainDep",
     "RetrieverDep",
     "IngestionPipelineDep",

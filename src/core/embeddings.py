@@ -60,6 +60,7 @@ class EmbeddingsFactory(LoggerMixin):
             return EmbeddingsFactory.create_ollama(
                 model=settings.embedding_model,
                 base_url=settings.ollama_base_url,
+                keep_alive=settings.ollama_keep_alive,
             )
         else:
             raise ValueError(
@@ -137,6 +138,7 @@ class EmbeddingsFactory(LoggerMixin):
     def create_ollama(
         model: str = "llama2",
         base_url: str = "http://localhost:11434",
+        keep_alive: int | str = -1,
         **kwargs: Any,
     ) -> Embeddings:
         """
@@ -173,6 +175,7 @@ class EmbeddingsFactory(LoggerMixin):
         return OllamaEmbeddings(
             model=model,
             base_url=base_url,
+            keep_alive=keep_alive,
             **kwargs,
         )
 

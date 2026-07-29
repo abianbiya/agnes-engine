@@ -192,17 +192,17 @@ class RAGChatChain(LoggerMixin):
         )
         
         # Function to handle conditional condensing
-        def get_standalone_question(inputs: Dict[str, Any]) -> str:
+        async def get_standalone_question(inputs: Dict[str, Any]) -> str:
             """Get standalone question (condensed if history exists)."""
             chat_history = inputs.get("chat_history", [])
             question = inputs["question"]
             
-            # If no history, use original question
+            # If no history, use original question (skips a whole LLM round trip)
             if not chat_history:
                 return question
             
             # Otherwise, condense the question
-            return condense_chain.invoke(inputs)
+            return await condense_chain.ainvoke(inputs)
         
         # Main RAG chain
         # Use RunnableLambda with afunc for async retrieval
@@ -211,7 +211,9 @@ class RAGChatChain(LoggerMixin):
         
         rag_chain = (
             RunnablePassthrough.assign(
-                standalone_question=get_standalone_question
+                standalone_question=RunnableLambda(
+                    func=lambda x: x["question"], afunc=get_standalone_question
+                )
             )
             | RunnableParallel({
                 "context": RunnableLambda(func=lambda x: "", afunc=retrieve_context),

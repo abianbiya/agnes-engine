@@ -56,6 +56,7 @@ class LLMFactory(LoggerMixin):
                 base_url=settings.ollama_base_url,
                 model=settings.ollama_model,
                 temperature=settings.llm_temperature,
+                keep_alive=settings.ollama_keep_alive,
             )
         else:
             raise ValueError(
@@ -111,6 +112,7 @@ class LLMFactory(LoggerMixin):
         base_url: str = "http://localhost:11434",
         model: str = "llama2",
         temperature: float = 0.7,
+        keep_alive: int | str = -1,
         **kwargs: Any,
     ) -> BaseChatModel:
         """
@@ -150,6 +152,7 @@ class LLMFactory(LoggerMixin):
             base_url=base_url,
             model=model,
             temperature=temperature,
+            keep_alive=keep_alive,
             **kwargs,
         )
 

@@ -85,6 +85,7 @@ class TestLLMFactory:
                 base_url="http://localhost:11434",
                 model="mistral",
                 temperature=0.8,
+                keep_alive=-1,
             )
             assert llm == mock_ollama_instance
 
@@ -193,6 +194,7 @@ class TestLLMFactoryUnit:
                 base_url="http://custom:8000",
                 model="codellama",
                 temperature=0.1,
+                keep_alive=-1,
                 custom_param="value",
             )
             assert result == mock_ollama_instance

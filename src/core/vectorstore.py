@@ -11,6 +11,7 @@ This module provides a manager class for ChromaDB operations including:
 from pathlib import Path
 from typing import Any
 
+import asyncio
 import chromadb
 from chromadb.api.models.Collection import Collection
 from chromadb.config import Settings as ChromaSettings
@@ -274,7 +275,8 @@ class VectorStoreManager(LoggerMixin):
         self.logger.info("searching", query_length=len(query), k=k, has_filter=filter is not None)
 
         try:
-            documents = self.vectorstore.similarity_search(
+            documents = await asyncio.to_thread(
+                self.vectorstore.similarity_search,
                 query=query,
                 k=k,
                 filter=filter,
@@ -317,7 +319,8 @@ class VectorStoreManager(LoggerMixin):
         )
 
         try:
-            results = self.vectorstore.similarity_search_with_score(
+            results = await asyncio.to_thread(
+                self.vectorstore.similarity_search_with_score,
                 query=query,
                 k=k,
                 filter=filter,
@@ -369,7 +372,8 @@ class VectorStoreManager(LoggerMixin):
         )
 
         try:
-            documents = self.vectorstore.max_marginal_relevance_search(
+            documents = await asyncio.to_thread(
+                self.vectorstore.max_marginal_relevance_search,
                 query=query,
                 k=k,
                 fetch_k=fetch_k,

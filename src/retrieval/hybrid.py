@@ -10,6 +10,7 @@ The hybrid approach uses Reciprocal Rank Fusion (RRF) to merge results.
 
 from __future__ import annotations
 
+import asyncio
 from dataclasses import dataclass
 from typing import Any
 
@@ -91,16 +92,21 @@ class HybridRetriever(LoggerMixin):
     async def _ensure_bm25_loaded(self) -> None:
         """
         Ensure BM25 index is loaded with documents from vectorstore.
-        
-        This loads all documents from ChromaDB into the BM25 index.
-        Since retriever instances are created per-request via dependency injection,
-        we load fresh data each time to ensure consistency.
+
+        Loads the whole collection once per retriever instance. Retrievers are
+        cached in src.api.dependencies, so this is a process-lifetime cost.
+        Call invalidate_bm25_cache() after ingestion.
         """
+        if self._documents_loaded:
+            return
+
         self.logger.info("Loading documents into BM25 index...")
-        
-        # Get all documents from ChromaDB collection
-        collection = self.vectorstore.collection
-        results = collection.get(include=["documents", "metadatas"])
+
+        # Get all documents from ChromaDB collection (blocking HTTP + tokenization)
+        def _load() -> Any:
+            return self.vectorstore.collection.get(include=["documents", "metadatas"])
+
+        results = await asyncio.to_thread(_load)
         
         if not results["documents"]:
             self.logger.warning("No documents found in ChromaDB collection")
@@ -114,8 +120,10 @@ class HybridRetriever(LoggerMixin):
             metadata = results["metadatas"][i] if results["metadatas"] else {}
             documents.append(Document(page_content=content, metadata=metadata))
         
-        # Initialize BM25 with documents
-        self._bm25_retriever = BM25Retriever(documents, k=self.config.bm25_k)
+        # Initialize BM25 with documents (tokenizing the corpus is CPU-bound)
+        self._bm25_retriever = await asyncio.to_thread(
+            BM25Retriever, documents, self.config.bm25_k
+        )
         self._documents_loaded = True
         
         self.logger.info(

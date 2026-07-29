@@ -6,16 +6,32 @@ variables and .env files with validation and type safety.
 """
 
 from functools import lru_cache
-from typing import Literal
+from typing import Literal, Union
 
 from pydantic import Field, SecretStr, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+def _normalize_keep_alive(value: Union[int, str]) -> Union[int, str]:
+    """Ollama wants an int (seconds, -1 = forever) or a duration like '30m'.
+
+    A bare numeric string such as "-1" is rejected by the API with
+    'time: missing unit in duration', so coerce it to int here.
+    """
+    if isinstance(value, str) and value.strip().lstrip("-").isdigit():
+        return int(value)
+    return value
+
+
 class LLMSettings(BaseSettings):
     """LLM provider configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="")
+    model_config = SettingsConfigDict(
+        env_prefix="",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     openai_api_key: SecretStr = Field(
         default=SecretStr(""),
@@ -51,6 +67,15 @@ class LLMSettings(BaseSettings):
         default="llama2",
         description="Ollama model name",
     )
+    # ponytail: "-1" pins the model in VRAM. A 70B cold load costs ~17-25s per
+    # request once Ollama's default 5m keep_alive expires. Set to "5m" if the
+    # GPU is shared and you would rather pay the reload than hold the memory.
+    ollama_keep_alive: Union[int, str] = Field(
+        default=-1,
+        description="Ollama keep_alive (-1 forever, or '30m')",
+    )
+
+    _norm_keep_alive = field_validator("ollama_keep_alive")(_normalize_keep_alive)
 
     @field_validator("llm_temperature")
     @classmethod
@@ -87,12 +112,23 @@ class EmbeddingSettings(BaseSettings):
         default="http://localhost:11434",
         description="Ollama base URL for embeddings",
     )
+    ollama_keep_alive: Union[int, str] = Field(
+        default=-1,
+        description="Ollama keep_alive for the embedding model",
+    )
+
+    _norm_keep_alive = field_validator("ollama_keep_alive")(_normalize_keep_alive)
 
 
 class ChromaSettings(BaseSettings):
     """ChromaDB configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="CHROMA_")
+    model_config = SettingsConfigDict(
+        env_prefix="CHROMA_",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     host: str = Field(
         default="localhost",
@@ -126,7 +162,12 @@ class ChromaSettings(BaseSettings):
 class ChunkingSettings(BaseSettings):
     """Document chunking configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="")
+    model_config = SettingsConfigDict(
+        env_prefix="",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     chunk_size: int = Field(
         default=1000,
@@ -158,7 +199,12 @@ class ChunkingSettings(BaseSettings):
 class RetrievalSettings(BaseSettings):
     """Retrieval configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="")
+    model_config = SettingsConfigDict(
+        env_prefix="",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     retrieval_k: int = Field(
         default=4,
@@ -189,7 +235,12 @@ class RetrievalSettings(BaseSettings):
 class MCPSettings(BaseSettings):
     """MCP server configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="MCP_")
+    model_config = SettingsConfigDict(
+        env_prefix="MCP_",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     server_port: int = Field(
         default=3000,
@@ -210,7 +261,12 @@ class MCPSettings(BaseSettings):
 class APISettings(BaseSettings):
     """API server configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="API_")
+    model_config = SettingsConfigDict(
+        env_prefix="API_",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     port: int = Field(
         default=8080,
@@ -248,7 +304,12 @@ class APISettings(BaseSettings):
 class RedisSettings(BaseSettings):
     """Redis configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="REDIS_")
+    model_config = SettingsConfigDict(
+        env_prefix="REDIS_",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     host: str = Field(
         default="localhost",
@@ -294,7 +355,12 @@ class RedisSettings(BaseSettings):
 class LoggingSettings(BaseSettings):
     """Logging configuration."""
 
-    model_config = SettingsConfigDict(env_prefix="")
+    model_config = SettingsConfigDict(
+        env_prefix="",
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = Field(
         default="INFO",
