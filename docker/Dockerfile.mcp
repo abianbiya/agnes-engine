@@ -19,6 +19,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
     && rm -rf /var/lib/apt/lists/*
 
+# ponytail: chunky wheel downloads drop connections; let pip retry itself
+ENV PIP_RETRIES=10 \
+    PIP_DEFAULT_TIMEOUT=120
+
 # Copy dependency files
 COPY pyproject.toml .
 
