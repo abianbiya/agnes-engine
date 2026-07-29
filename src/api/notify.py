@@ -17,10 +17,16 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Tuple
 
 import httpx
+from dotenv import load_dotenv
 
 from src.utils.logging import get_logger
 
 logger = get_logger(__name__)
+
+# pydantic-settings reads .env into its own object and never touches
+# os.environ, so os.getenv() is blind to it outside Docker. One line beats
+# adding a settings class for three optional strings.
+load_dotenv()
 
 # ponytail: plain env vars, not a pydantic settings block. Three optional
 # strings that are read once at startup do not need a schema.
@@ -123,7 +129,11 @@ async def send(text: str) -> None:
 async def watch_sessions() -> None:
     """Poll conversation memory and notify on ended conversations."""
     if not enabled():
-        logger.info("telegram_notify_disabled")
+        logger.warning(
+            "telegram_notify_disabled",
+            has_token=bool(BOT_TOKEN),
+            has_chat_id=bool(CHAT_ID),
+        )
         return
 
     from src.api.dependencies import get_conversation_memory
