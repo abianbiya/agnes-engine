@@ -69,10 +69,17 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     # does not pay the model cold-load (~24s for a 70B) or the corpus scan.
     asyncio.create_task(_warmup())
     
+    # Notify Telegram when a conversation goes idle (no-op without a token).
+    from src.api.notify import watch_sessions
+    
+    notifier = asyncio.create_task(watch_sessions())
+    
     yield
     
     # Shutdown
     logger.info("application_shutting_down")
+    
+    notifier.cancel()
     
     # Cleanup resources here if needed
     # e.g., close database connections, etc.
