@@ -42,4 +42,14 @@ if __name__ == "__main__":
     test_strips_citation_markers()
     test_keeps_legitimate_document_talk()
     test_context_drops_meta_and_duplicates()
+    test_grounding_rule_comes_after_context()
     print("ok")
+
+
+def test_grounding_rule_comes_after_context():
+    """Gemma3 follows the last instruction; before the context it gets outvoted."""
+    from src.chat.prompts import GROUNDING_RULE, RAG_CHAT_TEMPLATE, RAG_TEMPLATE
+
+    for tmpl in (RAG_TEMPLATE, RAG_CHAT_TEMPLATE):
+        assert tmpl.index(GROUNDING_RULE) > tmpl.index("{context}")
+        assert tmpl.index(GROUNDING_RULE) > tmpl.index("{question}")

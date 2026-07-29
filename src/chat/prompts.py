@@ -58,6 +58,12 @@ CHAT_PROMPT_TEMPLATE = ChatPromptTemplate.from_messages([
 ])
 
 
+# ponytail: the grounding rule is repeated after the context on purpose.
+# Instructions placed only before a long context get out-weighted, and gemma3
+# then fills gaps from pretraining (it named a rector who left in 2022).
+GROUNDING_RULE = """Answer using only the reference information above. Whatever you remember about UNNES from elsewhere is out of date and must not be used. If the reference information above does not answer the question, reply exactly: Saya tidak memiliki informasi yang cukup untuk menjawab pertanyaan ini."""
+
+
 # RAG prompt (one-off questions)
 RAG_TEMPLATE = SYSTEM_PROMPT + """
 
@@ -65,6 +71,8 @@ Reference information:
 {context}
 
 Question: {question}
+
+""" + GROUNDING_RULE + """
 Answer:"""
 
 RAG_PROMPT = PromptTemplate.from_template(RAG_TEMPLATE)
@@ -79,6 +87,8 @@ Reference information:
 {chat_history}
 
 Question: {question}
+
+""" + GROUNDING_RULE + """
 Answer:"""
 
 RAG_CHAT_PROMPT = PromptTemplate.from_template(RAG_CHAT_TEMPLATE)
@@ -267,6 +277,7 @@ def format_chat_history(messages: list) -> str:
 
 __all__ = [
     "SYSTEM_PROMPT",
+    "GROUNDING_RULE",
     "CONDENSE_QUESTION_TEMPLATE",
     "CONDENSE_QUESTION_PROMPT",
     "QA_TEMPLATE",
