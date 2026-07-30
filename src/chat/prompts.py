@@ -21,7 +21,7 @@ from langchain_core.prompts import (
 
 # The chat widget renders "Tanya lagi", "Terima kasih!" and "Buat Tiket"
 # buttons under the input, so a dead-end refusal wastes the escape hatch.
-NO_ANSWER = "Saya tidak memiliki informasi yang cukup untuk menjawab pertanyaan ini. Silakan tekan tombol \"Buat Tiket\" di bawah kolom chat agar pertanyaan kakak diteruskan ke petugas."
+NO_ANSWER = "Saya tidak memiliki informasi yang cukup untuk menjawab pertanyaan ini. Silakan tekan tombol \"Buat Tiket\" di bawah kolom chat agar pertanyaan kakak diteruskan ke customer service."
 
 
 # System prompt for seamless answers

@@ -1,7 +1,7 @@
 ### Question:
 Bagaimana cara membuat tiket? (buat tiket, bikin tiket, buatkan tiket, membuat tiket baru, open ticket)
 Answer:
-Untuk membuat tiket, silakan tekan tombol "Buat Tiket" yang ada di bawah kolom chat ini. Tiket kakak akan diteruskan ke petugas Admisi dan Layanan Terpadu (ALT) UNNES untuk ditindaklanjuti. Kakak juga bisa membuat tiket melalui laman unnes.ac.id/helpdesk dengan memilih "buat tiket baru".
+Untuk membuat tiket, silakan tekan tombol "Buat Tiket" yang ada di bawah kolom chat ini. Tiket kakak akan diteruskan ke customer service Admisi dan Layanan Terpadu (ALT) UNNES untuk ditindaklanjuti. Kakak juga bisa membuat tiket melalui laman unnes.ac.id/helpdesk dengan memilih "buat tiket baru".
 
 ### Question:
 Bagaimana cara menyampaikan aduan, komplain, keluhan, atau laporan masalah?
@@ -11,14 +11,14 @@ Sampaikan aduan kakak dengan menekan tombol "Buat Tiket" di bawah kolom chat, at
 ### Question:
 Bagaimana jika jawaban Agnes belum sesuai atau masalah saya belum selesai?
 Answer:
-Kalau jawaban saya belum menjawab kebutuhan kakak, silakan tekan tombol "Buat Tiket" di bawah kolom chat supaya pertanyaan kakak diteruskan ke petugas ALT UNNES. Kakak juga bisa menekan tombol "Tanya lagi" untuk bertanya dengan kalimat yang berbeda.
+Kalau jawaban saya belum menjawab kebutuhan kakak, silakan tekan tombol "Buat Tiket" di bawah kolom chat supaya pertanyaan kakak diteruskan ke customer service ALT UNNES. Kakak juga bisa menekan tombol "Tanya lagi" untuk bertanya dengan kalimat yang berbeda.
 
 ### Question:
 Tombol apa saja yang ada di chat Agnes?
 Answer:
-Di bawah kolom chat tersedia tiga tombol: "Tanya lagi" untuk mengajukan pertanyaan berikutnya, "Terima kasih!" untuk mengakhiri percakapan, dan "Buat Tiket" untuk meneruskan masalah kakak ke petugas ALT UNNES.
+Di bawah kolom chat tersedia tiga tombol: "Tanya lagi" untuk mengajukan pertanyaan berikutnya, "Terima kasih!" untuk mengakhiri percakapan, dan "Buat Tiket" untuk meneruskan masalah kakak ke customer service ALT UNNES.
 
 ### Question:
 Kapan tiket saya diproses? Jam layanan helpdesk UNNES?
 Answer:
-Tiket diproses oleh petugas Admisi dan Layanan Terpadu (ALT) pada jam layanan, yaitu Senin sampai Kamis pukul 08.00 sampai 15.00 WIB (istirahat pukul 12.00 sampai 13.00 WIB) dan Jumat pukul 08.00 sampai 14.00 WIB (istirahat pukul 11.30 sampai 13.00 WIB). Tiket yang dibuat di luar jam layanan akan ditindaklanjuti pada hari kerja berikutnya.
+Tiket diproses oleh customer service Admisi dan Layanan Terpadu (ALT) pada jam layanan, yaitu Senin sampai Kamis pukul 08.00 sampai 15.00 WIB (istirahat pukul 12.00 sampai 13.00 WIB) dan Jumat pukul 08.00 sampai 14.00 WIB (istirahat pukul 11.30 sampai 13.00 WIB). Tiket yang dibuat di luar jam layanan akan ditindaklanjuti pada hari kerja berikutnya.
