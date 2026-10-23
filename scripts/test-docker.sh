@@ -109,6 +109,7 @@ echo ""
 # Test 4: Document ingestion
 echo -e "${BLUE}Test 4: Document Ingestion${NC}"
 INGEST_DATA='{
+  "name": "test_docker.txt",
   "text": "Docker is a platform for developing, shipping, and running applications in containers. Containers allow developers to package applications with all dependencies.",
   "metadata": {
     "source": "test_docker",

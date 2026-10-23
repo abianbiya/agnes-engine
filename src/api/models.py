@@ -232,6 +232,13 @@ class SearchResponse(BaseModel):
         }
 
 
+class IngestTextRequest(BaseModel):
+    """Raw text to ingest. `name` identifies it: sending the same name again
+    replaces the previous version. End it in .md to get markdown handling."""
+    name: str = Field(..., min_length=1, max_length=200, description="Document name, e.g. 'faq-wisuda.md'")
+    text: str = Field(..., min_length=1, description="Document content")
+
+
 class IngestResponse(BaseModel):
     """
     Response model for document ingestion endpoint.
@@ -439,6 +446,7 @@ __all__ = [
     "SearchResult",
     "SearchResponse",
     "IngestResponse",
+    "IngestTextRequest",
     "HealthResponse",
     "ErrorResponse",
     "SessionDeleteResponse",

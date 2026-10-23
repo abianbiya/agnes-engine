@@ -35,6 +35,7 @@ from src.api.models import (
     ErrorResponse,
     HealthResponse,
     IngestResponse,
+    IngestTextRequest,
     RetrievalMethod,
     SearchRequest,
     SearchResponse,
@@ -504,6 +505,45 @@ async def ingest_document(
         # Always clean up temp file
         if temp_path is not None:
             shutil.rmtree(Path(temp_path).parent, ignore_errors=True)
+
+
+@router.post(
+    "/ingest/text",
+    response_model=IngestResponse,
+    status_code=status.HTTP_201_CREATED,
+    summary="Ingest raw text",
+    description=(
+        "Ingest text sent as JSON instead of a file. Re-sending the same `name` "
+        "replaces the previous version."
+    ),
+)
+async def ingest_text(
+    request: IngestTextRequest,
+    pipeline: IngestionPipelineDep = None,
+) -> IngestResponse:
+    # Same path as a file upload (frontmatter, replace-by-name, batched embeds)
+    name = Path(request.name).name
+    if Path(name).suffix.lower() not in {".md", ".txt"}:
+        name += ".txt"
+    workdir = Path(tempfile.mkdtemp())
+    try:
+        path = workdir / name
+        path.write_text(request.text, encoding="utf-8")
+        result = await pipeline.ingest_file(path)
+    finally:
+        shutil.rmtree(workdir, ignore_errors=True)
+        from src.api.dependencies import invalidate_retriever_caches
+        invalidate_retriever_caches()
+    return IngestResponse(
+        success=result.success,
+        filename=name,
+        file_path=None,
+        chunks_created=result.num_chunks_created,
+        chunks_stored=result.num_chunks_stored,
+        documents_loaded=result.num_documents_loaded,
+        file_type=Path(name).suffix.lstrip("."),
+        error_message=result.error,
+    )
 
 
 _INGEST_EXTENSIONS = {".pdf", ".txt", ".md"}
