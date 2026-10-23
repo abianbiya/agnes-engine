@@ -487,3 +487,18 @@ class TestPropertyBasedChunkingEnhanced:
             expected_total = len(doc_chunks)
             for chunk in doc_chunks:
                 assert chunk.metadata["total_chunks"] == expected_total
+
+
+def test_heading_path_labels_continuation_chunks():
+    """A chunk cut mid-section is labelled with its enclosing headings; one that
+    opens on a heading doesn't inherit the previous sibling's label."""
+    long_answer = "\n\n".join(f"Langkah {i}: " + "isi jawaban " * 8 for i in range(12))
+    text = f"### Question:\nApa itu ALT?\nAnswer:\n{long_answer}\n\n### Question:\nApa itu PPID?\nAnswer:\nPPID."
+    chunks = TextChunker(chunk_size=300, chunk_overlap=0).chunk_text(text)
+
+    assert chunks[0].page_content.startswith("### Question:")
+    continuation = [c for c in chunks if c.metadata.get("section")]
+    assert continuation and all(
+        c.page_content.startswith("[Question: Apa itu ALT?]") for c in continuation
+    )
+    assert chunks[-1].page_content.startswith("### Question:\nApa itu PPID?")

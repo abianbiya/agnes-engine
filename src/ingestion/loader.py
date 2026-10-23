@@ -7,11 +7,13 @@ and converting them to LangChain Document objects with appropriate metadata.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import List
 
 import fitz  # PyMuPDF
 import markdown
+import yaml
 from langchain_core.documents import Document
 
 from src.utils.logging import LoggerMixin
@@ -313,6 +315,32 @@ class DocumentLoaderFactory(LoggerMixin):
             "file_type": "markdown",
             "encoding": encoding_used,
         }
+
+        # Frontmatter (JDIH exports) -> header repeated on every chunk, so a
+        # chunk deep in the doc still says which peraturan/nomor/tahun it is.
+        if text.startswith("---\n"):
+            head, sep, body = text[4:].partition("\n---\n")
+            try:
+                fm = yaml.safe_load(head) if sep else None
+            except yaml.YAMLError:
+                fm = None
+            if isinstance(fm, dict):
+                # JDIH export: "### II" is a BAB, "#### 2" a Pasal; say so, so the
+                # chunk labels read "BAB II › Pasal 2". "## Definisi" repeats Pasal 1.
+                text = re.sub(r"^### ([IVXLC]+)$", r"### BAB \1", body, flags=re.M)
+                text = re.sub(r"^#### (\d+)$", r"#### Pasal \1", text, flags=re.M)
+                text = re.sub(r"^## Definisi\n.*?(?=^## )", "", text, flags=re.M | re.S)
+                metadata.update({k: str(v) for k, v in fm.items() if v is not None})
+                header = " ".join(filter(None, [
+                    fm.get("document_type"),
+                    f"Nomor {fm['document_number']}" if fm.get("document_number") else None,
+                    f"Tahun {fm['year']}" if fm.get("year") else None,
+                    f"tentang {fm['title']}" if fm.get("title") else None,
+                ]))
+                if fm.get("status"):
+                    header += f" (status: {fm['status']})"
+                if header:
+                    metadata["doc_header"] = header
         
         if html:
             metadata["html"] = html

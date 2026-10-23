@@ -8,12 +8,33 @@ context and metadata.
 
 from __future__ import annotations
 
+import re
 from typing import List
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from src.utils.logging import LoggerMixin
+
+
+# "### Question:\nApa ...?" -> label takes the line after a heading ending in ':'
+_HEADING = re.compile(r"^(#{2,6})[ \t]+(.+?)[ \t]*$(?=\n?(.*))", re.MULTILINE)
+
+
+def _heading_path(headings: list, start: int) -> str:
+    """Headings enclosing `start`, outermost first, e.g. "BAB II › Pasal 2".
+
+    A heading the chunk itself starts with is left out (it's already in the text),
+    so a chunk opening on "### Question:" doesn't inherit the previous question.
+    """
+    stack: list = []
+    for pos, level, text in headings:
+        if pos > start:
+            break
+        stack = [h for h in stack if h[1] < level] + [(pos, level, text)]
+    if stack and stack[-1][0] >= start - 1:
+        stack.pop()
+    return " › ".join(text for _, _, text in stack)
 
 
 class TextChunker(LoggerMixin):
@@ -40,6 +61,9 @@ class TextChunker(LoggerMixin):
     """
     
     DEFAULT_SEPARATORS = [
+        "\n### ",    # Markdown sections (FAQ "### Question:", peraturan BAB)
+        "\n#### ",   # Pasal
+        "\n##### ",  # Ayat
         "\n\n",  # Paragraphs
         "\n",    # Lines
         ". ",    # Sentences
@@ -82,6 +106,7 @@ class TextChunker(LoggerMixin):
             separators=self.separators,
             length_function=len,
             is_separator_regex=False,
+            add_start_index=True,
         )
         
         self.logger.info(
@@ -132,8 +157,17 @@ class TextChunker(LoggerMixin):
             # Split the document
             chunks = self.splitter.split_documents([document])
             
+            headings = [
+                (m.start(), len(m.group(1)),
+                 f"{m.group(2)} {m.group(3).strip()}" if m.group(2).endswith(":") else m.group(2))
+                for m in _HEADING.finditer(document.page_content)
+            ]
+
             # Preserve and enhance metadata for each chunk
             for chunk_index, chunk in enumerate(chunks):
+                path = _heading_path(headings, chunk.metadata.get("start_index", 0))
+                if path:
+                    chunk.metadata["section"] = path
                 enhanced_chunk = self._preserve_metadata(
                     chunk=chunk,
                     source_document=document,
@@ -217,9 +251,16 @@ class TextChunker(LoggerMixin):
             "doc_index": doc_index,
         })
         
+        content = chunk.page_content
+        if section := chunk.metadata.get("section"):
+            enhanced_metadata["section"] = section
+        label = " — ".join(filter(None, [enhanced_metadata.get("doc_header"), section]))
+        if label:
+            content = f"[{label}]\n{content}"
+
         # Create new document with enhanced metadata
         return Document(
-            page_content=chunk.page_content,
+            page_content=content,
             metadata=enhanced_metadata
         )
     
