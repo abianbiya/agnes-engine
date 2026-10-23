@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 # =============================================================================
 # Multi-stage Dockerfile for RAG Chatbot API Service
 # =============================================================================
@@ -8,7 +9,7 @@
 # -----------------------------------------------------------------------------
 # Stage 1: Builder - Build Python wheels for all dependencies
 # -----------------------------------------------------------------------------
-FROM python:3.11-slim as builder
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
@@ -28,19 +29,23 @@ COPY pyproject.toml .
 
 # Extract dependencies and create wheels
 # This builds all dependencies as wheel files for faster installation in production
-RUN pip install --no-cache-dir hatchling && \
-    pip wheel --no-cache-dir --wheel-dir /app/wheels \
+# - pip cache mount: a new python:3.11-slim digest invalidates this layer, but
+#   downloads are reused instead of fetched again
+# - CPU torch index: sentence-transformers (optional reranker) otherwise pulls
+#   CUDA torch + ~2.5GB of nvidia-* wheels; the reranker runs fine on CPU
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install hatchling && \
+    pip wheel --wheel-dir /app/wheels \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
     langchain>=0.3.0 \
     langchain-openai>=0.2.0 \
     langchain-community>=0.3.0 \
     langchain-chroma>=0.1.0 \
     langchain-ollama>=0.2.0 \
-    langgraph>=0.2.0 \
     chromadb>=0.5.0 \
     rank-bm25>=0.2.2 \
     pymupdf>=1.24.0 \
     markdown>=3.0 \
-    unstructured>=0.15.0 \
     sentence-transformers>=3.0.0 \
     fastapi>=0.115.0 \
     uvicorn[standard]>=0.30.0 \
@@ -50,9 +55,7 @@ RUN pip install --no-cache-dir hatchling && \
     pydantic-settings>=2.5.0 \
     python-dotenv>=1.0.0 \
     structlog>=24.4.0 \
-    httpx>=0.27.0 \
-    aiofiles>=24.1.0 \
-    redis>=5.0.0
+    httpx>=0.27.0
 
 # -----------------------------------------------------------------------------
 # Stage 2: Production - Minimal image with only runtime dependencies
