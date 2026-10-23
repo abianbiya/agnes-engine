@@ -25,6 +25,9 @@ from src.utils.logging import LoggerMixin, get_logger
 
 logger = get_logger(__name__)
 
+# ~32 chunks of ~1000 chars is a ~35KB request: well under any proxy body limit
+EMBED_BATCH_SIZE = 32
+
 
 class VectorStoreManager(LoggerMixin):
     """
@@ -235,10 +238,38 @@ class VectorStoreManager(LoggerMixin):
         )
 
         try:
-            if ids:
-                result_ids = self.vectorstore.add_documents(documents=documents, ids=ids)
-            else:
-                result_ids = self.vectorstore.add_documents(documents=documents)
+            # Embed in small batches: one request with every chunk of a big file
+            # hit "Payload too large", and Ollama/bge-m3 sometimes returns NaN for a
+            # batch. A failed batch is retried chunk by chunk; a chunk that still
+            # fails is skipped, so the returned ids can be fewer than documents.
+            result_ids: list[str] = []
+            last_error: Exception | None = None
+            for start in range(0, len(documents), EMBED_BATCH_SIZE):
+                batch = documents[start:start + EMBED_BATCH_SIZE]
+                batch_ids = ids[start:start + EMBED_BATCH_SIZE] if ids else None
+                try:
+                    result_ids += self.vectorstore.add_documents(
+                        documents=batch, **({"ids": batch_ids} if batch_ids else {})
+                    )
+                    continue
+                except Exception as e:
+                    self.logger.warning("embed_batch_failed_retrying_singly", start=start, error=str(e))
+                for i, doc in enumerate(batch):
+                    try:
+                        result_ids += self.vectorstore.add_documents(
+                            documents=[doc], **({"ids": [batch_ids[i]]} if batch_ids else {})
+                        )
+                    except Exception as e:
+                        last_error = e
+                        self.logger.error(
+                            "chunk_skipped_embed_failed",
+                            error=str(e),
+                            source=doc.metadata.get("file_name"),
+                            preview=doc.page_content[:120],
+                        )
+
+            if last_error and not result_ids:
+                raise last_error  # nothing stored: surface the real cause (e.g. Ollama's message)
 
             self.logger.info("documents_added", count=len(result_ids))
             return result_ids
@@ -387,6 +418,10 @@ class VectorStoreManager(LoggerMixin):
         except Exception as e:
             self.logger.error("search_mmr_failed", error=str(e), exc_info=True)
             raise
+
+    async def get_ids(self, where: dict) -> list[str]:
+        """IDs of stored chunks whose metadata matches `where`, e.g. {"file_name": "a.md"}."""
+        return self.vectorstore.get(where=where, include=[])["ids"]
 
     async def delete_documents(self, ids: list[str]) -> None:
         """

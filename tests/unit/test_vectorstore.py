@@ -463,3 +463,31 @@ class TestVectorStoreManagerUnit:
 
         with pytest.raises(Exception, match="Storage error"):
             await manager.add_documents(documents)
+
+
+async def test_add_documents_batches_and_skips_chunk_that_fails_to_embed():
+    """Big files are embedded in batches; a chunk the embedder chokes on (Ollama
+    NaN) is skipped instead of failing the whole file."""
+    import uuid
+    from langchain_core.embeddings import DeterministicFakeEmbedding
+    from src.config.settings import ChromaSettings as AppSettings
+    from src.core.vectorstore import EMBED_BATCH_SIZE, VectorStoreManager
+
+    calls = []
+
+    class NaNOnBad(DeterministicFakeEmbedding):
+        def embed_documents(self, texts):
+            calls.append(len(texts))
+            if any("BAD" in t for t in texts):
+                raise ValueError("json: unsupported value: NaN")
+            return super().embed_documents(texts)
+
+    manager = VectorStoreManager(
+        AppSettings(in_memory=True, collection=f"t{uuid.uuid4().hex[:8]}"), NaNOnBad(size=8)
+    )
+    docs = [Document(page_content=f"chunk {i}" + (" BAD" if i == 40 else "")) for i in range(70)]
+
+    ids = await manager.add_documents(docs)
+
+    assert len(ids) == 69
+    assert max(calls) <= EMBED_BATCH_SIZE

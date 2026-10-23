@@ -4,7 +4,10 @@ FastAPI routes for the RAG chatbot API.
 This module defines all REST API endpoints for the RAG system.
 """
 
+import io
+import shutil
 import tempfile
+import zipfile
 from pathlib import Path
 from typing import AsyncIterator
 
@@ -429,13 +432,10 @@ async def ingest_document(
     # Save uploaded file to temporary location
     temp_path = None
     try:
-        with tempfile.NamedTemporaryFile(
-            delete=False,
-            suffix=file_ext,
-        ) as temp_file:
-            content = await file.read()
-            temp_file.write(content)
-            temp_path = temp_file.name
+        # Keep the real filename: it's what re-ingest replaces by, and what sources show
+        temp_path = str(Path(tempfile.mkdtemp()) / Path(file.filename).name)
+        content = await file.read()
+        Path(temp_path).write_bytes(content)
         
         handler.logger.debug(
             "file_saved_temporarily",
@@ -446,9 +446,6 @@ async def ingest_document(
         
         # Ingest document
         result = await pipeline.ingest_file(temp_path)
-        
-        # Clean up temp file
-        Path(temp_path).unlink(missing_ok=True)
         
         # Convert to API response format
         response = IngestResponse(
@@ -506,10 +503,90 @@ async def ingest_document(
     finally:
         # Always clean up temp file
         if temp_path is not None:
-            try:
-                Path(temp_path).unlink(missing_ok=True)
-            except Exception:
-                pass
+            shutil.rmtree(Path(temp_path).parent, ignore_errors=True)
+
+
+_INGEST_EXTENSIONS = {".pdf", ".txt", ".md"}
+_ZIP_MEMBER_MAX_BYTES = 50 * 1024 * 1024
+
+
+@router.post(
+    "/ingest/batch",
+    response_model=list[IngestResponse],
+    status_code=status.HTTP_201_CREATED,
+    summary="Ingest many documents",
+    description=(
+        "Upload several files and/or .zip archives in one request. A file whose "
+        "name was ingested before replaces its old chunks."
+    ),
+)
+async def ingest_batch(
+    files: list[UploadFile] = File(..., description="Documents (.pdf/.txt/.md) or .zip archives"),
+    pipeline: IngestionPipelineDep = None,
+) -> list[IngestResponse]:
+    workdir = Path(tempfile.mkdtemp())
+    results: list[IngestResponse] = []
+    try:
+        paths: list[Path] = []
+        for upload in files:
+            name = Path(upload.filename or "").name
+            ext = Path(name).suffix.lower()
+            data = await upload.read()
+            if ext == ".zip":
+                try:
+                    archive = zipfile.ZipFile(io.BytesIO(data))
+                except zipfile.BadZipFile:
+                    results.append(_skipped(name, "not a valid zip file"))
+                    continue
+                for member in archive.infolist():
+                    # basename only (no path traversal); skip macOS "__MACOSX/._x" junk
+                    member_name = Path(member.filename).name
+                    if member.is_dir() or "__MACOSX" in member.filename or member_name.startswith("."):
+                        continue
+                    if Path(member_name).suffix.lower() not in _INGEST_EXTENSIONS:
+                        results.append(_skipped(member_name, "unsupported file type"))
+                    elif member.file_size > _ZIP_MEMBER_MAX_BYTES:
+                        results.append(_skipped(member_name, "file too large"))
+                    else:
+                        (workdir / member_name).write_bytes(archive.read(member))
+                        paths.append(workdir / member_name)
+            elif ext in _INGEST_EXTENSIONS:
+                (workdir / name).write_bytes(data)
+                paths.append(workdir / name)
+            else:
+                results.append(_skipped(name, "unsupported file type"))
+
+        for path in dict.fromkeys(paths):  # same name twice in one batch: ingest once
+            result = await pipeline.ingest_file(path)
+            results.append(IngestResponse(
+                success=result.success,
+                filename=path.name,
+                file_path=result.file_path,
+                chunks_created=result.num_chunks_created,
+                chunks_stored=result.num_chunks_stored,
+                documents_loaded=result.num_documents_loaded,
+                file_type=path.suffix.lstrip("."),
+                error_message=result.error,
+            ))
+
+        handler.logger.info(
+            "ingest_batch_completed",
+            files=len(results),
+            failed=sum(not r.success for r in results),
+            correlation_id=get_correlation_id(),
+        )
+        return results
+    finally:
+        shutil.rmtree(workdir, ignore_errors=True)
+        from src.api.dependencies import invalidate_retriever_caches
+        invalidate_retriever_caches()
+
+
+def _skipped(filename: str, reason: str) -> IngestResponse:
+    return IngestResponse(
+        success=False, filename=filename, chunks_created=0, chunks_stored=0,
+        documents_loaded=0, file_type=Path(filename).suffix.lstrip("."), error_message=reason,
+    )
 
 
 @router.get(

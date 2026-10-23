@@ -185,8 +185,17 @@ class IngestionPipeline(LoggerMixin):
             
             # Step 3 & 4: Generate embeddings and store (handled by vectorstore)
             self.logger.debug("Storing chunks in vector database", file_path=path_str)
+            # Re-ingesting a file replaces its chunks instead of duplicating them.
+            # Old ids are dropped only after the new ones landed, so a failed
+            # embed keeps the previous version.
+            # ponytail: keyed on file name, so two different files with the same
+            # name replace each other; key on a path/hash if that ever matters.
+            old_ids = await self.vectorstore.get_ids(where={"file_name": path.name})
             ids = await self.vectorstore.add_documents(chunks)
-            
+            if old_ids:
+                await self.vectorstore.delete_documents(old_ids)
+                self.logger.info("Replaced previous chunks", file_path=path_str, num_replaced=len(old_ids))
+
             self.logger.info(
                 "File ingestion complete",
                 file_path=path_str,
@@ -200,9 +209,13 @@ class IngestionPipeline(LoggerMixin):
                 file_path=path_str,
                 num_documents_loaded=len(documents),
                 num_chunks_created=len(chunks),
-                num_chunks_stored=len(ids)
+                num_chunks_stored=len(ids),
+                error=(
+                    f"{len(chunks) - len(ids)} chunk(s) failed to embed and were skipped"
+                    if len(ids) < len(chunks) else None
+                ),
             )
-            
+
         except Exception as e:
             error_msg = str(e)
             self.logger.error(
