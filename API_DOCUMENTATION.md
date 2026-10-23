@@ -19,6 +19,8 @@ The RAG (Retrieval-Augmented Generation) Chatbot API provides endpoints for conv
   - [Chat Stream](#chat-stream)
   - [Search](#search)
   - [Ingest Document](#ingest-document)
+  - [Ingest Batch](#ingest-batch)
+  - [Ingest Text](#ingest-text)
   - [Clear Session](#clear-session)
 - [Models](#models)
 - [Error Handling](#error-handling)
@@ -269,6 +271,10 @@ Upload and ingest a document file into the knowledge base.
 - `.txt` - Plain text files
 - `.md` - Markdown files
 
+**Re-ingesting replaces.** Documents are identified by file name: uploading a file whose name was ingested before replaces its old chunks instead of adding duplicates. Two different documents with the same name will therefore overwrite each other.
+
+**Markdown frontmatter.** A `.md` file that starts with YAML frontmatter (`document_type`, `document_number`, `year`, `title`, `status`, as in the JDIH exports) gets a header such as `[Peraturan Rektor Nomor 11 Tahun 2026 tentang ...]` on every chunk, so answers can cite the right regulation from any part of it.
+
 #### Response `201 Created`
 
 | Field | Type | Description |
@@ -277,7 +283,7 @@ Upload and ingest a document file into the knowledge base.
 | `filename` | string | Name of ingested file |
 | `file_path` | string | Path to the ingested file |
 | `chunks_created` | integer | Number of text chunks created |
-| `chunks_stored` | integer | Number of chunks stored in vectorstore |
+| `chunks_stored` | integer | Number of chunks stored in vectorstore. Lower than `chunks_created` if some chunks failed to embed and were skipped (see `error_message`) |
 | `documents_loaded` | integer | Number of documents loaded from file |
 | `file_type` | string | Type of file (pdf, txt, md) |
 | `error_message` | string | Error message if ingestion failed |
@@ -286,7 +292,7 @@ Upload and ingest a document file into the knowledge base.
 {
   "success": true,
   "filename": "research_paper.pdf",
-  "file_path": "/tmp/tmpabc123.pdf",
+  "file_path": "/tmp/tmpabc123/research_paper.pdf",
   "chunks_created": 45,
   "chunks_stored": 45,
   "documents_loaded": 1,
@@ -300,6 +306,123 @@ Upload and ingest a document file into the knowledge base.
 ```bash
 curl -X POST http://localhost:8080/api/v1/ingest \
   -F "file=@/path/to/document.pdf"
+```
+
+---
+
+### Ingest Batch
+
+Upload several documents and/or `.zip` archives in one request.
+
+**Endpoint:** `POST /ingest/batch`
+
+**Content-Type:** `multipart/form-data`
+
+#### Request
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `files` | file (repeatable) | Yes | `.pdf`, `.txt`, `.md` files or `.zip` archives containing them. Repeat the field for each file. |
+
+Zip handling:
+- Supported files are taken from any folder in the archive; folder names are ignored (only the file name is kept).
+- macOS `__MACOSX/` entries and hidden files are skipped silently.
+- Unsupported files and files over 50 MB are reported as failed entries in the response; the rest of the batch still ingests.
+
+As with [Ingest Document](#ingest-document), a file name that was ingested before replaces its old chunks.
+
+#### Response `201 Created`
+
+An array with one [Ingest Document response](#response-201-created) object per file (including skipped ones, with `success: false`).
+
+```json
+[
+  {
+    "success": true,
+    "filename": "FAQ PPID UNNES.txt",
+    "file_path": "/tmp/tmpx1y2z3/FAQ PPID UNNES.txt",
+    "chunks_created": 12,
+    "chunks_stored": 12,
+    "documents_loaded": 1,
+    "file_type": "txt",
+    "error_message": null
+  },
+  {
+    "success": false,
+    "filename": "notes.docx",
+    "file_path": null,
+    "chunks_created": 0,
+    "chunks_stored": 0,
+    "documents_loaded": 0,
+    "file_type": "docx",
+    "error_message": "unsupported file type"
+  }
+]
+```
+
+#### Example
+
+```bash
+# a zip
+curl -X POST http://localhost:8080/api/v1/ingest/batch \
+  -F "files=@knowledge-base.zip"
+
+# several files (can be mixed with zips)
+curl -X POST http://localhost:8080/api/v1/ingest/batch \
+  -F "files=@faq.txt" \
+  -F "files=@peraturan-11-2026.md" \
+  -F "files=@more-docs.zip"
+```
+
+> Large batches can take minutes (every chunk is embedded through the embedding model). Make sure any reverse proxy in front of the API allows a long enough timeout and a large enough request body.
+
+---
+
+### Ingest Text
+
+Ingest raw text sent as JSON instead of a file.
+
+**Endpoint:** `POST /ingest/text`
+
+**Content-Type:** `application/json`
+
+#### Request Body
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `name` | string | Yes | Document name (1-200 characters). Identifies the document: sending the same `name` again replaces the previous version. End it in `.md` for markdown handling (frontmatter header, heading-aware chunking); anything else is treated as `.txt`. |
+| `text` | string | Yes | Document content (non-empty) |
+
+```json
+{
+  "name": "faq-wisuda.md",
+  "text": "### Question:\nKapan wisuda periode Desember?\nAnswer:\nWisuda periode Desember dilaksanakan ..."
+}
+```
+
+#### Response `201 Created`
+
+Same as [Ingest Document](#response-201-created); `filename` is the normalized name (e.g. `faq-wisuda` becomes `faq-wisuda.txt`) and `file_path` is `null`.
+
+```json
+{
+  "success": true,
+  "filename": "faq-wisuda.md",
+  "file_path": null,
+  "chunks_created": 1,
+  "chunks_stored": 1,
+  "documents_loaded": 1,
+  "file_type": "md",
+  "error_message": null
+}
+```
+
+#### Example
+
+```bash
+curl -X POST http://localhost:8080/api/v1/ingest/text \
+  -H "Content-Type: application/json" \
+  -d '{"name": "faq-wisuda.md", "text": "### Question:\nKapan wisuda?\nAnswer:\n..."}'
 ```
 
 ---
@@ -497,7 +620,21 @@ curl -X DELETE http://localhost:8080/api/v1/session/user-123
 
 ### Wipe Knowledge Base
 
-To completely reset the knowledge base and remove all ingested documents:
+Through the API (deletes every chunk in the collection; cannot be undone):
+
+```bash
+curl -X DELETE http://localhost:8080/api/v1/collection
+```
+
+Response:
+```json
+{
+  "message": "Collection cleared successfully",
+  "documents_deleted": 553
+}
+```
+
+Or, to also remove the ChromaDB data volume:
 
 ```bash
 # Stop containers
@@ -509,6 +646,17 @@ docker volume rm docker_chroma-data
 # Restart containers
 docker compose -f docker/docker-compose.yml up -d
 ```
+
+### Re-ingest Everything
+
+Needed after changes to chunking or the embedding model, since existing chunks keep the old format:
+
+```bash
+curl -X DELETE http://localhost:8080/api/v1/collection
+curl -X POST http://localhost:8080/api/v1/ingest/batch -F "files=@knowledge-base.zip"
+```
+
+To update a single document afterwards, ingest it again under the same file name; no wipe needed.
 
 ### View Logs
 
@@ -541,6 +689,14 @@ Currently, no rate limits are enforced. For production deployments, consider add
 ---
 
 ## Changelog
+
+### Unreleased
+- `POST /ingest/batch`: many files and/or `.zip` archives per request
+- `POST /ingest/text`: ingest raw text as JSON
+- Re-ingesting a file name replaces its old chunks instead of duplicating them
+- Uploaded files keep their real name (sources no longer show `tmpXXXX.md`)
+- Chunks split on markdown headings (Pasal, FAQ `### Question:`) and carry a header with the document (from frontmatter) and section
+- Embeddings are sent in batches of 32 chunks; a chunk that fails to embed is skipped and reported in `error_message` instead of failing the whole file
 
 ### v1.0.0
 - Initial release
